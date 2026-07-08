@@ -316,6 +316,7 @@
     }
 
     .tile-icon {
+      position: relative;
       width: 36px;
       height: 36px;
       display: grid;
@@ -324,9 +325,16 @@
       color: #ffffff;
       background: linear-gradient(135deg, var(--blue), var(--green));
       font-weight: 900;
+      overflow: hidden;
+    }
+
+    .tile-icon::before {
+      content: attr(data-fallback);
     }
 
     .tile-icon img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       border-radius: 8px;
@@ -774,7 +782,7 @@
           <div class="app-orbit">
             <div class="app-tile">
               <div class="tile-head">
-                <span class="tile-icon"><img src="icons/Icon-192.png" alt=""></span>
+                <span class="tile-icon" data-fallback="VN"><img src="./icons/Icon-192.png" alt="" onerror="this.remove()"></span>
                 <span>VNStock AI</span>
               </div>
               <div class="tile-bars" aria-hidden="true">
@@ -838,8 +846,8 @@
           <p>Một trang giới thiệu chung cho các ứng dụng đã public và các sản phẩm mới trong hệ sinh thái SmartGroup Apps.</p>
         </div>
         <div class="apps-grid">
-          <a class="app-card" href="vnstockai-index.html">
-            <img class="app-icon" src="icons/Icon-192.png" alt="">
+          <a class="app-card" href="index.html">
+            <img class="app-icon" src="./icons/Icon-192.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'placeholder-icon', textContent: 'VN'}))">
             <h3>VNStock AI</h3>
             <p>Hỗ trợ phân tích cổ phiếu Việt Nam bằng AI, dòng tiền, kỹ thuật, định giá và lịch sử phân tích.</p>
             <span class="link">Xem trang ứng dụng</span>
