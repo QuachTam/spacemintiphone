@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SmartGroup Apps phát triển các ứng dụng di động hữu ích cho phân tích dữ liệu, năng suất và công cụ AI.">
+  <title>SmartGroup Apps</title>
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --panel: #ffffff;
+      --blue: #2563eb;
+      --green: #059669;
+      --bg: #f8fafc;
+      --soft: #eff6ff;
+      --shadow: 0 22px 60px rgba(15, 23, 42, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(248, 250, 252, 0.88);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner,
+    .section-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      color: #ffffff;
+      font-weight: 900;
+      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.26);
+    }
+
+    .nav {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 86px 0 58px;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(5, 150, 105, 0.12)),
+        #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 22px);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: #ffffff;
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.18);
+    }
+
+    .button.secondary {
+      color: var(--blue);
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .showcase {
+      padding: 24px;
+      border-radius: 8px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .app-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+    }
+
+    .showcase h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .showcase p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      padding: 14px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid #bfdbfe;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .app-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      border-radius: 8px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.05);
+      text-decoration: none;
+    }
+
+    .app-card h3 {
+      margin: 14px 0 8px;
+      font-size: 21px;
+    }
+
+    .app-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .app-card .link {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .placeholder-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #f1f5f9;
+      color: #64748b;
+      font-weight: 900;
+    }
+
+    .support {
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .support-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+      border: 1px solid #bfdbfe;
+    }
+
+    .support-panel h2 {
+      margin: 0 0 8px;
+    }
+
+    .support-panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 34px 0;
+      color: #cbd5e1;
+      background: #0f172a;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer a {
+      color: #bfdbfe;
+      font-weight: 800;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .topbar-inner {
+        align-items: flex-start;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .hero-grid,
+      .apps-grid,
+      .support-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="smartgroup-index.html" aria-label="SmartGroup Apps">
+        <span class="brand-mark">SG</span>
+        <span>SmartGroup Apps</span>
+      </a>
+      <nav class="nav" aria-label="Liên kết chính">
+        <a href="#apps">Ứng dụng</a>
+        <a href="#support">Hỗ trợ</a>
+        <a href="vnstockai-policy.html">Bảo mật</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="section-inner hero-grid">
+        <div>
+          <span class="eyebrow">Mobile apps, data tools and AI utilities</span>
+          <h1>SmartGroup Apps</h1>
+          <p class="lead">Nơi tập hợp các ứng dụng do SmartGroup phát triển, từ công cụ phân tích dữ liệu, hỗ trợ đầu tư đến các tiện ích AI cho công việc hằng ngày.</p>
+          <div class="actions">
+            <a class="button primary" href="#apps">Xem ứng dụng</a>
+            <a class="button secondary" href="mailto:smartgroup.tq.global@gmail.com">Liên hệ hỗ trợ</a>
+          </div>
+        </div>
+        <aside class="showcase" aria-label="Ứng dụng nổi bật">
+          <div class="showcase-head">
+            <img class="app-icon" src="icons/Icon-192.png" alt="">
+            <div>
+              <h2>VNStock AI</h2>
+              <p>Ứng dụng nổi bật hiện tại của SmartGroup.</p>
+            </div>
+          </div>
+          <p>Phân tích cổ phiếu Việt Nam bằng AI, theo dõi dòng tiền, tín hiệu kỹ thuật và định giá tham khảo.</p>
+          <div class="metric-grid">
+            <div class="metric">
+              <strong>AI reports</strong>
+              <span>Báo cáo nhanh</span>
+            </div>
+            <div class="metric">
+              <strong>iOS</strong>
+              <span>App Store</span>
+            </div>
+            <div class="metric">
+              <strong>Pro</strong>
+              <span>Subscription</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="apps">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Ứng dụng của SmartGroup</h2>
+          <p>Mỗi ứng dụng có trang giới thiệu, hỗ trợ và chính sách riêng, nhưng đều dùng chung một hệ sinh thái SmartGroup Apps.</p>
+        </div>
+        <div class="apps-grid">
+          <a class="app-card" href="vnstockai-index.html">
+            <img class="app-icon" src="icons/Icon-192.png" alt="">
+            <h3>VNStock AI</h3>
+            <p>Hỗ trợ phân tích cổ phiếu Việt Nam bằng AI, dòng tiền, kỹ thuật, định giá và lịch sử phân tích.</p>
+            <span class="link">Xem trang ứng dụng</span>
+          </a>
+          <article class="app-card">
+            <div class="placeholder-icon">AI</div>
+            <h3>AI Utilities</h3>
+            <p>Các công cụ AI nhỏ gọn phục vụ công việc, ghi chú, tổng hợp thông tin và tự động hóa cá nhân.</p>
+            <span class="link">Sắp ra mắt</span>
+          </article>
+          <article class="app-card">
+            <div class="placeholder-icon">+</div>
+            <h3>Ứng dụng tiếp theo</h3>
+            <p>Không gian dành cho các sản phẩm mới của SmartGroup khi mở rộng sang nhiều lĩnh vực khác.</p>
+            <span class="link">Đang phát triển</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="support">
+      <div class="section-inner">
+        <div class="support-panel">
+          <div>
+            <h2>Cần hỗ trợ?</h2>
+            <p>Gửi email cho SmartGroup nếu bạn gặp lỗi ứng dụng, vấn đề thanh toán, quyền truy cập Pro hoặc muốn góp ý sản phẩm.</p>
+          </div>
+          <a class="button primary" href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div>
+        <strong>SmartGroup Apps</strong><br>
+        Phát triển ứng dụng dữ liệu, năng suất và AI.
+      </div>
+      <div>
+        <a href="vnstockai-support.html">Hỗ trợ</a>
+        <a href="vnstockai-term.html">Điều khoản</a>
+        <a href="vnstockai-policy.html">Bảo mật</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
