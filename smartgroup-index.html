@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SmartGroup Apps phát triển các ứng dụng di động hữu ích cho phân tích dữ liệu, năng suất và công cụ AI.">
+  <meta name="description" content="SmartGroup Apps builds useful mobile apps for data analysis, productivity, and AI tools.">
   <title>SmartGroup Apps</title>
   <style>
     :root {
@@ -85,6 +85,7 @@
 
     .nav {
       display: flex;
+      align-items: center;
       gap: 16px;
       font-size: 14px;
       font-weight: 800;
@@ -93,6 +94,22 @@
     .nav a {
       color: var(--muted);
       text-decoration: none;
+    }
+
+    .language-select {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 800;
+      padding: 8px 30px 8px 10px;
+      cursor: pointer;
+      background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+      background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
     }
 
     .hero {
@@ -760,10 +777,16 @@
         <span class="brand-mark">SG</span>
         <span>SmartGroup Apps</span>
       </a>
-      <nav class="nav" aria-label="Liên kết chính">
-        <a href="#apps">Ứng dụng</a>
-        <a href="#support">Hỗ trợ</a>
-        <a href="vnstockai-policy.html">Bảo mật</a>
+      <nav class="nav" aria-label="Main links">
+        <a href="#apps" data-i="navApps">Apps</a>
+        <a href="#support" data-i="navSupport">Support</a>
+        <a href="vnstockai-policy.html" data-i="navPrivacy">Privacy</a>
+        <select class="language-select" id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="ja">日本語</option>
+          <option value="zh-HK">繁體中文</option>
+        </select>
       </nav>
     </div>
   </header>
@@ -772,15 +795,15 @@
     <section class="hero">
       <div class="section-inner hero-grid">
         <div>
-          <span class="eyebrow">Published apps, data tools and AI utilities</span>
+          <span class="eyebrow" data-i="eyebrow">Published apps, data tools and AI utilities</span>
           <h1>SmartGroup Apps</h1>
-          <p class="lead">Nơi tập hợp các ứng dụng do SmartGroup phát triển, từ công cụ phân tích dữ liệu, hỗ trợ đầu tư đến các tiện ích AI cho công việc hằng ngày.</p>
+          <p class="lead" data-i="lead">A home for apps built by SmartGroup, from data analysis and investing tools to AI utilities for everyday work.</p>
           <div class="actions">
-            <a class="button primary" href="#apps">Xem ứng dụng</a>
-            <a class="button secondary" href="mailto:smartgroup.tq.global@gmail.com">Liên hệ hỗ trợ</a>
+            <a class="button primary" href="#apps" data-i="viewApps">View apps</a>
+            <a class="button secondary" href="mailto:smartgroup.tq.global@gmail.com" data-i="contactSupport">Contact support</a>
           </div>
         </div>
-        <aside class="launch-board" aria-label="Hệ sinh thái ứng dụng SmartGroup">
+        <aside class="launch-board" aria-label="SmartGroup app ecosystem">
           <div class="launch-title">
             <span>SmartGroup Launch Board</span>
             <span class="launch-status">Public apps</span>
@@ -847,8 +870,8 @@
           </div>
           <div class="signal-card">
             <div>
-              <strong>Product ecosystem</strong>
-              <span>Một Marketing URL chung cho tất cả ứng dụng SmartGroup.</span>
+              <strong data-i="ecosystemTitle">Product ecosystem</strong>
+              <span data-i="ecosystemText">One marketing URL for every SmartGroup app.</span>
             </div>
             <div class="signal-meter" aria-label="72 điểm"></div>
           </div>
@@ -859,33 +882,33 @@
     <section id="apps">
       <div class="section-inner">
         <div class="section-title">
-          <h2>Ứng dụng của SmartGroup</h2>
-          <p>Một trang giới thiệu chung cho các ứng dụng đã public và các sản phẩm mới trong hệ sinh thái SmartGroup Apps.</p>
+          <h2 data-i="appsTitle">SmartGroup apps</h2>
+          <p data-i="appsSubtitle">A shared product hub for published apps and new products in the SmartGroup Apps ecosystem.</p>
         </div>
         <div class="apps-grid">
           <a class="app-card" href="https://apps.apple.com/us/app/vnstock-ai/id6784948458">
             <img class="app-icon" src="./icons/vnstockai-icon.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'placeholder-icon', textContent: 'VN'}))">
             <h3>VNStock AI</h3>
-            <p>Hỗ trợ phân tích cổ phiếu Việt Nam bằng AI, dòng tiền, kỹ thuật, định giá và lịch sử phân tích.</p>
-            <span class="link">Mở trên App Store</span>
+            <p data-i="vnstockDesc">AI-powered support for Vietnamese stock analysis, money flow, technical signals, valuation, and analysis history.</p>
+            <span class="link" data-i="openAppStore">Open on App Store</span>
           </a>
           <a class="app-card" href="https://apps.apple.com/us/app/clearmint/id6783654735">
             <img class="app-icon" src="./icons/clearmint-icon.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'placeholder-icon', textContent: 'CM'}))">
             <h3>ClearMint</h3>
-            <p>Ứng dụng đã public trên App Store trong hệ sinh thái SmartGroup.</p>
-            <span class="link">Mở trên App Store</span>
+            <p data-i="clearmintDesc">A published App Store app in the SmartGroup ecosystem.</p>
+            <span class="link" data-i="openAppStore">Open on App Store</span>
           </a>
           <a class="app-card" href="https://apps.apple.com/us/app/group-fund-ez/id6759708272">
             <img class="app-icon" src="./icons/groupfundez-icon.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'placeholder-icon', textContent: 'GF'}))">
             <h3>Group Fund EZ</h3>
-            <p>Ứng dụng đã public trên App Store, phục vụ nhu cầu quản lý và theo dõi quỹ nhóm.</p>
-            <span class="link">Mở trên App Store</span>
+            <p data-i="groupfundDesc">A published App Store app for managing and tracking group funds.</p>
+            <span class="link" data-i="openAppStore">Open on App Store</span>
           </a>
           <a class="app-card" href="https://apps.apple.com/us/app/spacemint/id6780437652?mt=12">
             <img class="app-icon" src="./icons/spacemint-icon.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'placeholder-icon', textContent: 'SM'}))">
             <h3>SpaceMint</h3>
-            <p>Ứng dụng đã public trên Mac App Store trong bộ sản phẩm SmartGroup.</p>
-            <span class="link">Mở trên Mac App Store</span>
+            <p data-i="spacemintDesc">A published Mac App Store app in the SmartGroup product family.</p>
+            <span class="link" data-i="openMacStore">Open on Mac App Store</span>
           </a>
         </div>
       </div>
@@ -895,8 +918,8 @@
       <div class="section-inner">
         <div class="support-panel">
           <div>
-            <h2>Cần hỗ trợ?</h2>
-            <p>Gửi email cho SmartGroup nếu bạn gặp lỗi ứng dụng, vấn đề thanh toán, quyền truy cập Pro hoặc muốn góp ý sản phẩm.</p>
+            <h2 data-i="supportTitle">Need support?</h2>
+            <p data-i="supportText">Email SmartGroup if you run into app issues, billing questions, Pro access problems, or product feedback.</p>
           </div>
           <a class="button primary" href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a>
         </div>
@@ -908,14 +931,26 @@
     <div class="section-inner footer-inner">
       <div>
         <strong>SmartGroup Apps</strong><br>
-        Phát triển ứng dụng dữ liệu, năng suất và AI.
+        <span data-i="footerText">Building data, productivity, and AI apps.</span>
       </div>
       <div>
-        <a href="vnstockai-support.html">Hỗ trợ</a>
-        <a href="vnstockai-term.html">Điều khoản</a>
-        <a href="vnstockai-policy.html">Bảo mật</a>
+        <a href="vnstockai-support.html" data-i="navSupport">Support</a>
+        <a href="vnstockai-term.html" data-i="terms">Terms</a>
+        <a href="vnstockai-policy.html" data-i="navPrivacy">Privacy</a>
       </div>
     </div>
   </footer>
+  <script>
+    const L={
+      en:{navApps:"Apps",navSupport:"Support",navPrivacy:"Privacy",terms:"Terms",eyebrow:"Published apps, data tools and AI utilities",lead:"A home for apps built by SmartGroup, from data analysis and investing tools to AI utilities for everyday work.",viewApps:"View apps",contactSupport:"Contact support",ecosystemTitle:"Product ecosystem",ecosystemText:"One marketing URL for every SmartGroup app.",appsTitle:"SmartGroup apps",appsSubtitle:"A shared product hub for published apps and new products in the SmartGroup Apps ecosystem.",vnstockDesc:"AI-powered support for Vietnamese stock analysis, money flow, technical signals, valuation, and analysis history.",clearmintDesc:"A published App Store app in the SmartGroup ecosystem.",groupfundDesc:"A published App Store app for managing and tracking group funds.",spacemintDesc:"A published Mac App Store app in the SmartGroup product family.",openAppStore:"Open on App Store",openMacStore:"Open on Mac App Store",supportTitle:"Need support?",supportText:"Email SmartGroup if you run into app issues, billing questions, Pro access problems, or product feedback.",footerText:"Building data, productivity, and AI apps."},
+      vi:{navApps:"Ứng dụng",navSupport:"Hỗ trợ",navPrivacy:"Bảo mật",terms:"Điều khoản",eyebrow:"Ứng dụng đã phát hành, công cụ dữ liệu và tiện ích AI",lead:"Nơi tập hợp các ứng dụng do SmartGroup phát triển, từ công cụ phân tích dữ liệu, hỗ trợ đầu tư đến các tiện ích AI cho công việc hằng ngày.",viewApps:"Xem ứng dụng",contactSupport:"Liên hệ hỗ trợ",ecosystemTitle:"Hệ sinh thái sản phẩm",ecosystemText:"Một Marketing URL chung cho tất cả ứng dụng SmartGroup.",appsTitle:"Ứng dụng của SmartGroup",appsSubtitle:"Một trang giới thiệu chung cho các ứng dụng đã public và các sản phẩm mới trong hệ sinh thái SmartGroup Apps.",vnstockDesc:"Hỗ trợ phân tích cổ phiếu Việt Nam bằng AI, dòng tiền, kỹ thuật, định giá và lịch sử phân tích.",clearmintDesc:"Ứng dụng đã public trên App Store trong hệ sinh thái SmartGroup.",groupfundDesc:"Ứng dụng đã public trên App Store, phục vụ nhu cầu quản lý và theo dõi quỹ nhóm.",spacemintDesc:"Ứng dụng đã public trên Mac App Store trong bộ sản phẩm SmartGroup.",openAppStore:"Mở trên App Store",openMacStore:"Mở trên Mac App Store",supportTitle:"Cần hỗ trợ?",supportText:"Gửi email cho SmartGroup nếu bạn gặp lỗi ứng dụng, vấn đề thanh toán, quyền truy cập Pro hoặc muốn góp ý sản phẩm.",footerText:"Phát triển ứng dụng dữ liệu, năng suất và AI."},
+      ja:{navApps:"アプリ",navSupport:"サポート",navPrivacy:"プライバシー",terms:"利用規約",eyebrow:"公開済みアプリ、データツール、AIユーティリティ",lead:"SmartGroupが開発するアプリのハブです。データ分析、投資支援、日々の仕事に役立つAIユーティリティを集めています。",viewApps:"アプリを見る",contactSupport:"サポートへ連絡",ecosystemTitle:"プロダクトエコシステム",ecosystemText:"すべてのSmartGroupアプリのための共通マーケティングURLです。",appsTitle:"SmartGroupのアプリ",appsSubtitle:"公開済みアプリとSmartGroup Appsエコシステムの新しい製品を紹介する共通ハブです。",vnstockDesc:"AI、資金フロー、テクニカル、バリュエーション、分析履歴でベトナム株分析を支援します。",clearmintDesc:"SmartGroupエコシステムで公開済みのApp Storeアプリです。",groupfundDesc:"グループ資金の管理と追跡に役立つ公開済みApp Storeアプリです。",spacemintDesc:"SmartGroup製品ファミリーで公開済みのMac App Storeアプリです。",openAppStore:"App Storeで開く",openMacStore:"Mac App Storeで開く",supportTitle:"サポートが必要ですか？",supportText:"アプリの問題、請求、Proアクセス、製品フィードバックについてSmartGroupへメールしてください。",footerText:"データ、生産性、AIアプリを開発しています。"},
+      "zh-HK":{navApps:"應用程式",navSupport:"支援",navPrivacy:"私隱",terms:"條款",eyebrow:"已發布應用程式、數據工具和 AI 實用工具",lead:"SmartGroup 開發應用程式的集中頁面，涵蓋數據分析、投資輔助，以及日常工作的 AI 工具。",viewApps:"查看應用程式",contactSupport:"聯絡支援",ecosystemTitle:"產品生態系統",ecosystemText:"所有 SmartGroup 應用程式共用的 Marketing URL。",appsTitle:"SmartGroup 應用程式",appsSubtitle:"SmartGroup Apps 生態系統中已發布應用程式和新產品的共用介紹頁。",vnstockDesc:"以 AI、資金流、技術指標、估值和分析歷史輔助越南股票分析。",clearmintDesc:"SmartGroup 生態系統中已在 App Store 發布的應用程式。",groupfundDesc:"已在 App Store 發布，用於管理和追蹤群組基金的應用程式。",spacemintDesc:"SmartGroup 產品系列中已在 Mac App Store 發布的應用程式。",openAppStore:"在 App Store 開啟",openMacStore:"在 Mac App Store 開啟",supportTitle:"需要支援？",supportText:"如遇到應用程式問題、付款問題、Pro 權限或產品意見，請電郵 SmartGroup。",footerText:"開發數據、生產力和 AI 應用程式。"}
+    };
+    const select=document.getElementById("languageSelect");
+    const pick=()=>{if(localStorage.smartgroupLang)return localStorage.smartgroupLang;const lang=(navigator.language||"").toLowerCase();if(lang.startsWith("vi"))return"vi";if(lang.startsWith("ja"))return"ja";if(lang.startsWith("zh"))return"zh-HK";return"en"};
+    function render(lang=pick()){const t=L[lang]||L.en;document.documentElement.lang=lang;localStorage.smartgroupLang=lang;select.value=lang;document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]||e.textContent)}
+    select.addEventListener("change",()=>render(select.value));render();
+  </script>
 </body>
 </html>
