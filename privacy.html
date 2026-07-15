@@ -6,71 +6,36 @@
   <meta name="description" content="SpaceMint Privacy Policy">
   <title>Privacy Policy — SpaceMint</title>
   <style>
-    :root{color-scheme:dark;--bg:#08081d;--panel:#121231;--mint:#68f3c3;--text:#f5f5ff;--muted:#bdbdd3}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#2b2868,var(--bg) 420px);color:var(--text);font:16px/1.72 system-ui,-apple-system,sans-serif}.wrap{width:min(820px,calc(100% - 38px));margin:auto}nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}nav a{color:var(--muted);text-decoration:none}.brand{color:#fff;font-size:20px;font-weight:800}.navlinks{display:flex;gap:16px}main{background:#ffffff09;border:1px solid #ffffff14;border-radius:24px;padding:clamp(25px,6vw,54px);margin:34px 0 60px}h1{font-size:clamp(36px,7vw,58px);letter-spacing:-.04em;margin:0 0 8px}h2{font-size:22px;margin:38px 0 9px;color:#dffef4}p,li{color:var(--muted)}a{color:var(--mint)}.date{color:var(--mint);margin-bottom:32px}footer{padding:0 0 40px;color:var(--muted);font-size:14px}@media(max-width:600px){.navlinks{font-size:14px;gap:10px}}
+    :root{color-scheme:dark;--bg:#08081d;--mint:#68f3c3;--text:#f5f5ff;--muted:#bdbdd3;--line:#ffffff14;--panel:#ffffff09}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#2b2868,var(--bg) 420px);color:var(--text);font:16px/1.72 system-ui,-apple-system,sans-serif}.wrap{width:min(860px,calc(100% - 38px));margin:auto}nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0}a{color:var(--mint)}nav a{color:var(--muted);text-decoration:none}.brand{color:#fff;font-size:20px;font-weight:800}.navlinks{display:flex;gap:16px}.lang{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.lang button{border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--muted);padding:8px 12px;font:inherit;cursor:pointer}.lang button.active{background:var(--mint);color:#101026;font-weight:800}main{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(25px,6vw,54px);margin:28px 0 60px}h1{font-size:clamp(36px,7vw,58px);letter-spacing:-.04em;margin:0 0 8px}h2{font-size:22px;margin:38px 0 9px;color:#dffef4}p,li{color:var(--muted)}.date{color:var(--mint);margin-bottom:32px}footer{padding:0 0 40px;color:var(--muted);font-size:14px}@media(max-width:600px){.navlinks{font-size:14px;gap:10px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav>
       <a class="brand" href="index.html">SpaceMint</a>
-      <div class="navlinks"><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+      <div class="navlinks"><a href="terms.html" data-i="terms">Terms</a><a href="support.html" data-i="support">Support</a></div>
     </nav>
+    <div class="lang" aria-label="Language">
+      <button data-lang="en">English</button><button data-lang="vi">Tiếng Việt</button><button data-lang="ja">日本語</button><button data-lang="zh-HK">繁體中文</button>
+    </div>
     <main>
-      <h1>Privacy Policy</h1>
-      <p class="date">Effective June 23, 2026</p>
-
-      <p>This Privacy Policy explains how SpaceMint handles information when you use the SpaceMint application and related services.</p>
-
-      <h2>1. Our privacy approach</h2>
-      <p>SpaceMint is designed to analyze photos, videos, contacts, and duplicate candidates locally on your device. SpaceMint does not require an account for its core on-device cleanup features.</p>
-
-      <h2>2. Device permissions</h2>
-      <p>Depending on the features you choose, SpaceMint may request permission to access:</p>
-      <ul>
-        <li><strong>Photos and videos:</strong> to identify duplicates, similar photos, screenshots, and large media.</li>
-        <li><strong>Contacts:</strong> to identify possible duplicate or incomplete contacts.</li>
-      </ul>
-      <p>You can change these permissions at any time in the iOS Settings app.</p>
-
-      <h2>3. Google Drive and Google Photos</h2>
-      <p>If you connect a Google account, SpaceMint uses Google OAuth and requests limited access appropriate to the feature you select. SpaceMint accesses only files or media you explicitly authorize or select through Google-provided selection flows.</p>
-      <ul>
-        <li>Selected Google media may be downloaded temporarily for duplicate analysis on your device.</li>
-        <li>OAuth credentials are stored using the iOS Keychain.</li>
-        <li>SpaceMint does not sell Google user data or use it for advertising.</li>
-        <li>SpaceMint does not transfer Google user data to data brokers.</li>
-        <li>SpaceMint does not automatically delete your Google Drive or Google Photos content.</li>
-      </ul>
-      <p>SpaceMint's use and transfer of information received from Google APIs will comply with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-
-      <h2>4. Local data and cache</h2>
-      <p>SpaceMint may store local scan state, media identifiers, hashes, dimensions, category summaries, preferences, and cleanup history so that the app can operate efficiently. Temporary cloud downloads are intended to be removed after analysis. You can clear supported scan cache from the Privacy Center inside the app.</p>
-
-      <h2>5. Purchases</h2>
-      <p>Subscriptions and purchases are processed by Apple. SpaceMint may receive entitlement and transaction status needed to unlock paid features, but does not receive your full payment-card information.</p>
-
-      <h2>6. Analytics, advertising, and tracking</h2>
-      <p>The current version of SpaceMint does not include third-party advertising or cross-app tracking SDKs. If this changes, this policy and applicable consent disclosures will be updated before those features are used.</p>
-
-      <h2>7. Sharing and disclosure</h2>
-      <p>SpaceMint does not sell personal information. Information may be disclosed when required by law, to protect users or the service, or to service providers strictly necessary to operate a feature and subject to appropriate safeguards.</p>
-
-      <h2>8. Data retention and deletion</h2>
-      <p>Local app data remains on your device until it is cleared, overwritten, or the app is removed. Disconnecting Google removes the stored OAuth token from SpaceMint. You may also revoke SpaceMint's access from your Google Account security settings.</p>
-
-      <h2>9. Children</h2>
-      <p>SpaceMint is not directed to children under 13, or the minimum age required in the applicable jurisdiction, and we do not knowingly collect personal information from children.</p>
-
-      <h2>10. Security</h2>
-      <p>We use reasonable technical safeguards, including iOS permission controls and Keychain storage for OAuth credentials. No method of storage or transmission can be guaranteed to be completely secure.</p>
-
-      <h2>11. Changes to this policy</h2>
-      <p>We may update this policy as SpaceMint evolves. The effective date at the top of this page will identify the latest version.</p>
-
-      <h2>12. Contact</h2>
-      <p>For privacy questions or deletion requests, email <a href="mailto:support@spacemint.app">smartgroup.tq.global@gmail.com</a>.</p>
+      <h1 data-i="title">Privacy Policy</h1>
+      <p class="date" data-i="date">Effective June 23, 2026</p>
+      <div id="content"></div>
     </main>
     <footer>© 2026 SpaceMint. All rights reserved.</footer>
   </div>
+  <script>
+    const sections={
+      en:{terms:"Terms",support:"Support",title:"Privacy Policy",date:"Effective June 23, 2026",items:[["Overview","This Privacy Policy explains how SpaceMint handles information when you use the app and related services."],["1. Our approach","SpaceMint is designed to analyze photos, videos, contacts, and duplicate candidates locally on your device. Core on-device cleanup features do not require an account."],["2. Device permissions","Depending on the features you choose, SpaceMint may request access to photos and videos to identify duplicates, similar photos, screenshots, and large media; and contacts to identify possible duplicate or incomplete contacts. You can change permissions in iOS Settings."],["3. Google Drive and Google Photos","If you connect Google, SpaceMint uses Google OAuth and requests limited access for the feature you select. SpaceMint accesses only files or media you explicitly authorize or select. Selected Google media may be downloaded temporarily for analysis, OAuth credentials are stored in iOS Keychain, and SpaceMint does not sell Google user data, use it for advertising, transfer it to data brokers, or automatically delete Google content."],["4. Local data and cache","SpaceMint may store local scan state, media identifiers, hashes, dimensions, category summaries, preferences, and cleanup history so the app can operate efficiently. Temporary cloud downloads are intended to be removed after analysis. Supported scan cache can be cleared from Privacy Center inside the app."],["5. Purchases","Subscriptions and purchases are processed by Apple. SpaceMint may receive entitlement and transaction status needed to unlock paid features, but does not receive your full payment-card information."],["6. Analytics, advertising, and tracking","The current version of SpaceMint does not include third-party advertising or cross-app tracking SDKs. If this changes, this policy and applicable consent disclosures will be updated first."],["7. Sharing and disclosure","SpaceMint does not sell personal information. Information may be disclosed when required by law, to protect users or the service, or to service providers strictly necessary to operate a feature and subject to safeguards."],["8. Retention and deletion","Local app data remains on your device until it is cleared, overwritten, or the app is removed. Disconnecting Google removes the stored OAuth token from SpaceMint. You may also revoke access from your Google Account security settings."],["9. Children","SpaceMint is not directed to children under 13, or the minimum age required in your jurisdiction, and we do not knowingly collect personal information from children."],["10. Security","We use reasonable technical safeguards, including iOS permission controls and Keychain storage for OAuth credentials. No storage or transmission method can be guaranteed completely secure."],["11. Changes","We may update this policy as SpaceMint evolves. The effective date identifies the latest version."],["12. Contact",'For privacy questions or deletion requests, email <a href="mailto:support@spacemint.app">support@spacemint.app</a>.']]},
+      vi:{terms:"Điều khoản",support:"Hỗ trợ",title:"Chính sách quyền riêng tư",date:"Có hiệu lực từ 23/06/2026",items:[["Tổng quan","Chính sách này giải thích cách SpaceMint xử lý thông tin khi bạn dùng ứng dụng và các dịch vụ liên quan."],["1. Cách tiếp cận","SpaceMint được thiết kế để phân tích ảnh, video, danh bạ và các mục có thể trùng lặp ngay trên thiết bị. Các tính năng dọn dẹp cốt lõi trên thiết bị không yêu cầu tài khoản."],["2. Quyền trên thiết bị","Tùy tính năng bạn dùng, SpaceMint có thể xin quyền truy cập ảnh và video để tìm ảnh trùng, ảnh tương tự, ảnh chụp màn hình và media lớn; và danh bạ để tìm liên hệ trùng hoặc thiếu thông tin. Bạn có thể đổi quyền trong Cài đặt iOS."],["3. Google Drive và Google Photos","Nếu bạn kết nối Google, SpaceMint dùng Google OAuth và chỉ xin quyền giới hạn cho tính năng đã chọn. SpaceMint chỉ truy cập tệp hoặc media bạn cho phép hoặc chọn rõ ràng. Media Google đã chọn có thể được tải tạm thời để phân tích, thông tin OAuth được lưu trong iOS Keychain, và SpaceMint không bán dữ liệu Google, không dùng cho quảng cáo, không chuyển cho data broker, không tự động xóa nội dung Google."],["4. Dữ liệu cục bộ và bộ nhớ đệm","SpaceMint có thể lưu trạng thái quét, mã định danh media, hash, kích thước, tóm tắt danh mục, tùy chọn và lịch sử dọn dẹp trên thiết bị để ứng dụng hoạt động hiệu quả. Tệp cloud tải tạm thời được dự kiến xóa sau phân tích. Có thể xóa cache quét được hỗ trợ trong Privacy Center của ứng dụng."],["5. Mua hàng","Đăng ký và mua hàng do Apple xử lý. SpaceMint có thể nhận trạng thái quyền lợi và giao dịch để mở khóa tính năng trả phí, nhưng không nhận đầy đủ thông tin thẻ thanh toán."],["6. Phân tích, quảng cáo và tracking","Phiên bản hiện tại của SpaceMint không có SDK quảng cáo bên thứ ba hoặc tracking chéo ứng dụng. Nếu thay đổi, chính sách này và thông báo đồng ý phù hợp sẽ được cập nhật trước."],["7. Chia sẻ và tiết lộ","SpaceMint không bán thông tin cá nhân. Thông tin có thể được tiết lộ khi pháp luật yêu cầu, để bảo vệ người dùng hoặc dịch vụ, hoặc cho nhà cung cấp cần thiết để vận hành tính năng và có biện pháp bảo vệ phù hợp."],["8. Lưu giữ và xóa","Dữ liệu cục bộ nằm trên thiết bị cho đến khi bị xóa, ghi đè hoặc gỡ ứng dụng. Ngắt kết nối Google sẽ xóa OAuth token đã lưu khỏi SpaceMint. Bạn cũng có thể thu hồi quyền trong cài đặt bảo mật Tài khoản Google."],["9. Trẻ em","SpaceMint không hướng đến trẻ dưới 13 tuổi hoặc độ tuổi tối thiểu theo khu vực pháp lý, và chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em."],["10. Bảo mật","Chúng tôi dùng các biện pháp kỹ thuật hợp lý, gồm quyền iOS và Keychain cho OAuth. Không có phương thức lưu trữ hoặc truyền tải nào an toàn tuyệt đối."],["11. Thay đổi","Chúng tôi có thể cập nhật chính sách khi SpaceMint phát triển. Ngày hiệu lực cho biết phiên bản mới nhất."],["12. Liên hệ",'Nếu có câu hỏi về quyền riêng tư hoặc yêu cầu xóa dữ liệu, hãy email <a href="mailto:support@spacemint.app">support@spacemint.app</a>.']]},
+      ja:{terms:"利用規約",support:"サポート",title:"プライバシーポリシー",date:"2026年6月23日発効",items:[["概要","本ポリシーは、SpaceMintアプリおよび関連サービス利用時の情報の取り扱いを説明します。"],["1. 基本方針","SpaceMintは、写真、ビデオ、連絡先、重複候補を端末上で分析するよう設計されています。主要な端末内クリーンアップ機能にアカウントは不要です。"],["2. 端末の権限","利用する機能に応じて、SpaceMintは重複、類似写真、スクリーンショット、大きなメディアを見つけるため写真とビデオへのアクセス、また重複または不完全な連絡先を見つけるため連絡先へのアクセスを求める場合があります。権限はiOS設定で変更できます。"],["3. Google DriveとGoogle Photos","Googleを接続する場合、SpaceMintはGoogle OAuthを使用し、選択した機能に必要な限定アクセスのみを求めます。明示的に許可または選択したファイルやメディアだけにアクセスします。選択したGoogleメディアは分析のため一時的にダウンロードされることがあり、OAuth認証情報はiOS Keychainに保存されます。SpaceMintはGoogleユーザーデータを販売、広告利用、データブローカーへ転送、またはGoogleコンテンツの自動削除を行いません。"],["4. ローカルデータとキャッシュ","SpaceMintは効率的に動作するため、スキャン状態、メディア識別子、ハッシュ、サイズ、カテゴリ概要、設定、クリーンアップ履歴を端末内に保存する場合があります。一時的なクラウドダウンロードは分析後に削除される想定です。対応するスキャンキャッシュはアプリ内のPrivacy Centerから削除できます。"],["5. 購入","サブスクリプションと購入はAppleが処理します。SpaceMintは有料機能の解除に必要な権利と取引状態を受け取る場合がありますが、完全な支払いカード情報は受け取りません。"],["6. 分析、広告、トラッキング","現在のSpaceMintには第三者広告SDKやクロスアプリトラッキングSDKは含まれていません。変更がある場合、このポリシーと必要な同意表示を事前に更新します。"],["7. 共有と開示","SpaceMintは個人情報を販売しません。法律で求められる場合、ユーザーやサービス保護のため、または機能提供に必要なサービス提供者に対し、適切な保護措置のもとで情報を開示する場合があります。"],["8. 保持と削除","ローカルアプリデータは、削除、上書き、またはアプリ削除まで端末に残ります。Google接続を解除すると、SpaceMintに保存されたOAuthトークンが削除されます。Googleアカウントのセキュリティ設定からアクセスを取り消すこともできます。"],["9. 子ども","SpaceMintは13歳未満、または地域で定められる最低年齢未満の子どもを対象としておらず、子どもの個人情報を意図的に収集しません。"],["10. セキュリティ","iOSの権限制御やOAuth認証情報のKeychain保存など、合理的な技術的保護を使用します。ただし、完全に安全な保存または送信方法はありません。"],["11. 変更","SpaceMintの進化に伴い本ポリシーを更新する場合があります。発効日が最新バージョンを示します。"],["12. 連絡先",'プライバシーに関する質問や削除依頼は <a href="mailto:support@spacemint.app">support@spacemint.app</a> までご連絡ください。']]},
+      "zh-HK":{terms:"條款",support:"支援",title:"私隱政策",date:"2026年6月23日生效",items:[["概覽","本私隱政策說明你使用 SpaceMint 應用程式及相關服務時，SpaceMint 如何處理資料。"],["1. 我們的方式","SpaceMint 設計為在你的裝置上分析相片、影片、聯絡人和可能重複的項目。核心裝置內清理功能不需要帳戶。"],["2. 裝置權限","視乎你使用的功能，SpaceMint 可能要求存取相片和影片，以找出重複、相似相片、螢幕截圖和大型媒體；亦可能要求存取聯絡人，以找出可能重複或資料不完整的聯絡人。你可在 iOS 設定更改權限。"],["3. Google Drive 和 Google Photos","如你連接 Google，SpaceMint 會使用 Google OAuth，並只要求所選功能需要的有限存取權。SpaceMint 只會存取你明確授權或選取的檔案或媒體。選取的 Google 媒體可能會暫時下載作分析，OAuth 憑證會儲存在 iOS Keychain。SpaceMint 不會出售 Google 使用者資料、不會用於廣告、不會轉交資料經紀，亦不會自動刪除 Google 內容。"],["4. 本機資料和快取","SpaceMint 可能在裝置上儲存掃描狀態、媒體識別碼、雜湊、尺寸、分類摘要、偏好設定和清理記錄，以便應用程式有效運作。暫時下載的雲端內容預期會在分析後移除。支援的掃描快取可在應用程式內 Privacy Center 清除。"],["5. 購買","訂閱和購買由 Apple 處理。SpaceMint 可能接收解鎖付費功能所需的權益和交易狀態，但不會收到完整付款卡資料。"],["6. 分析、廣告和追蹤","目前版本的 SpaceMint 不包含第三方廣告或跨 App 追蹤 SDK。如有變更，本政策和相關同意披露會先行更新。"],["7. 分享和披露","SpaceMint 不會出售個人資料。資料可能會在法律要求、保護使用者或服務，或向營運功能所必需且受保障措施約束的服務提供者披露。"],["8. 保留和刪除","本機 App 資料會保留在裝置上，直到被清除、覆寫或移除 App。斷開 Google 連接會從 SpaceMint 移除已儲存的 OAuth token。你亦可在 Google 帳戶安全設定撤銷存取權。"],["9. 兒童","SpaceMint 並非面向13歲以下，或相關司法管轄區最低年齡以下的兒童，且我們不會 knowingly 收集兒童個人資料。"],["10. 安全","我們使用合理技術保障，包括 iOS 權限控制和以 Keychain 儲存 OAuth 憑證。任何儲存或傳輸方式都不能保證完全安全。"],["11. 變更","隨著 SpaceMint 發展，我們可能更新本政策。頁首生效日期代表最新版本。"],["12. 聯絡",'如有私隱問題或刪除要求，請電郵 <a href="mailto:support@spacemint.app">support@spacemint.app</a>。']]}
+    };
+    const pick=()=>{if(localStorage.spacemintLang)return localStorage.spacemintLang;const lang=(navigator.language||"").toLowerCase();if(lang.startsWith("vi"))return"vi";if(lang.startsWith("ja"))return"ja";if(lang.startsWith("zh"))return"zh-HK";return"en"};
+    function textBlocks(text){return text.split(/(?<=\\.)\\s+|(?<=。)/).filter(Boolean).map(x=>`<p>${x}</p>`).join("")}
+    function render(lang=pick()){const t=sections[lang]||sections.en;document.documentElement.lang=lang;localStorage.spacemintLang=lang;document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.getElementById("content").innerHTML=t.items.map(([h,p],i)=>`${i?`<h2>${h}</h2>`:""}${textBlocks(p)}`).join("")}
+    document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>render(b.dataset.lang));render();
+  </script>
 </body>
 </html>
