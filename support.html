@@ -6,52 +6,36 @@
   <meta name="description" content="Get help with SpaceMint">
   <title>Support — SpaceMint</title>
   <style>
-    :root{color-scheme:dark;--bg:#08081d;--mint:#68f3c3;--text:#f5f5ff;--muted:#bdbdd3}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#2b2868,var(--bg) 450px);color:var(--text);font:16px/1.65 system-ui,-apple-system,sans-serif}.wrap{width:min(840px,calc(100% - 38px));margin:auto}nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}nav a{color:var(--muted);text-decoration:none}.brand{color:#fff;font-size:20px;font-weight:800}.navlinks{display:flex;gap:16px}.hero{text-align:center;padding:62px 0 42px}.hero h1{font-size:clamp(40px,8vw,64px);letter-spacing:-.04em;margin:0 0 12px}.hero p{color:var(--muted);font-size:19px}.button{display:inline-block;margin-top:16px;padding:13px 20px;border-radius:999px;background:linear-gradient(90deg,var(--mint),#9b8cff);color:#101026;text-decoration:none;font-weight:800}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 60px}.card{background:#ffffff09;border:1px solid #ffffff14;border-radius:20px;padding:24px}.card h2{font-size:19px;margin:0 0 8px}.card p{color:var(--muted);margin:0}.card a{color:var(--mint)}footer{padding:28px 0 40px;border-top:1px solid #ffffff14;color:var(--muted);font-size:14px}@media(max-width:650px){.grid{grid-template-columns:1fr}.navlinks{font-size:14px;gap:10px}}
+    :root{color-scheme:dark;--bg:#08081d;--mint:#68f3c3;--text:#f5f5ff;--muted:#bdbdd3;--line:#ffffff14;--panel:#ffffff09}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#2b2868,var(--bg) 450px);color:var(--text);font:16px/1.65 system-ui,-apple-system,sans-serif}.wrap{width:min(900px,calc(100% - 38px));margin:auto}nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0}a{color:var(--mint)}nav a{color:var(--muted);text-decoration:none}.brand{color:#fff;font-size:20px;font-weight:800}.navlinks{display:flex;gap:16px}.lang{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.lang button{border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--muted);padding:8px 12px;font:inherit;cursor:pointer}.lang button.active{background:var(--mint);color:#101026;font-weight:800}.hero{text-align:center;padding:42px 0}.hero h1{font-size:clamp(40px,8vw,64px);letter-spacing:-.04em;margin:0 0 12px}.hero p{color:var(--muted);font-size:19px}.button{display:inline-block;margin-top:16px;padding:13px 20px;border-radius:999px;background:linear-gradient(90deg,var(--mint),#9b8cff);color:#101026;text-decoration:none;font-weight:800}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 60px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}.card h2{font-size:19px;margin:0 0 8px}.card p{color:var(--muted);margin:0}footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}@media(max-width:650px){.grid{grid-template-columns:1fr}nav{align-items:flex-start}.navlinks{font-size:14px;gap:10px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav>
       <a class="brand" href="index.html">SpaceMint</a>
-      <div class="navlinks"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+      <div class="navlinks"><a href="privacy.html" data-i="privacy">Privacy</a><a href="terms.html" data-i="terms">Terms</a></div>
     </nav>
-
+    <div class="lang" aria-label="Language">
+      <button data-lang="en">English</button><button data-lang="vi">Tiếng Việt</button><button data-lang="ja">日本語</button><button data-lang="zh-HK">繁體中文</button>
+    </div>
     <main>
       <section class="hero">
-        <h1>How can we help?</h1>
-        <p>Tell us what happened and we’ll help you get SpaceMint back on track.</p>
-        <a class="button" href="mailto:support@spacemint.app?subject=SpaceMint%20Support">Email Support</a>
+        <h1 data-i="title">How can we help?</h1>
+        <p data-i="subtitle">Tell us what happened and we’ll help you get SpaceMint back on track.</p>
+        <a class="button" href="mailto:support@spacemint.app?subject=SpaceMint%20Support" data-i="email">Email Support</a>
       </section>
-
-      <section class="grid">
-        <article class="card">
-          <h2>Photos permission</h2>
-          <p>Open iOS Settings → SpaceMint → Photos and choose the level of access you want to provide.</p>
-        </article>
-        <article class="card">
-          <h2>Google connection</h2>
-          <p>SpaceMint only accesses Google Drive or Google Photos media that you explicitly authorize or select.</p>
-        </article>
-        <article class="card">
-          <h2>Restore purchases</h2>
-          <p>Open SpaceMint Settings and select Restore Purchases while signed in to the Apple Account used for the purchase.</p>
-        </article>
-        <article class="card">
-          <h2>Cancel a subscription</h2>
-          <p>Manage subscriptions from iOS Settings → Apple Account → Subscriptions. Billing is handled by Apple.</p>
-        </article>
-        <article class="card">
-          <h2>Deleting content</h2>
-          <p>Review every suggested item before deletion. Cloud content is not automatically deleted by SpaceMint.</p>
-        </article>
-        <article class="card">
-          <h2>Privacy request</h2>
-          <p>Email <a href="mailto:support@spacemint.app?subject=SpaceMint%20Privacy%20Request">smartgroup.tq.global@gmail.com</a> with the subject “Privacy Request.”</p>
-        </article>
-      </section>
+      <section class="grid" id="cards"></section>
     </main>
-
     <footer>© 2026 SpaceMint. All rights reserved.</footer>
   </div>
+  <script>
+    const L={en:{privacy:"Privacy",terms:"Terms",title:"How can we help?",subtitle:"Tell us what happened and we'll help you get SpaceMint back on track.",email:"Email Support",cards:[["Photos permission","Open iOS Settings -> SpaceMint -> Photos and choose the level of access you want to provide."],["Contacts permission","Open iOS Settings -> SpaceMint -> Contacts if contact cleanup cannot scan."],["Restore purchases","Open SpaceMint Settings and select Restore Purchases while signed in to the Apple Account used for the purchase."],["Cancel a subscription","Manage subscriptions from iOS Settings -> Apple Account -> Subscriptions. Billing is handled by Apple."],["Deleting content","Review every suggested item before deletion. SpaceMint asks for confirmation before deleting local media."],["Keep Safe items","Items marked Keep Safe can be managed from SpaceMint Settings -> Keep Safe Items."],["Cleanup history","Open SpaceMint Settings -> Cleanup History to review or clear previous cleanup sessions."],["Contact backups","Contact merge and removal backups are available from SpaceMint Settings -> Contact Backups."]]},
+    vi:{privacy:"Quyền riêng tư",terms:"Điều khoản",title:"Bạn cần hỗ trợ gì?",subtitle:"Hãy cho chúng tôi biết vấn đề và chúng tôi sẽ giúp bạn dùng SpaceMint ổn định lại.",email:"Email hỗ trợ",cards:[["Quyền truy cập Ảnh","Mở Cài đặt iOS -> SpaceMint -> Ảnh và chọn mức truy cập bạn muốn cấp."],["Quyền truy cập Danh bạ","Mở Cài đặt iOS -> SpaceMint -> Danh bạ nếu tính năng dọn dẹp danh bạ không quét được."],["Khôi phục mua hàng","Mở Cài đặt trong SpaceMint và chọn Khôi phục mua hàng bằng đúng Tài khoản Apple đã mua."],["Hủy đăng ký","Quản lý đăng ký trong Cài đặt iOS -> Tài khoản Apple -> Đăng ký. Apple xử lý thanh toán."],["Xóa nội dung","Hãy xem lại từng mục được gợi ý trước khi xóa. SpaceMint luôn hỏi xác nhận trước khi xóa media cục bộ."],["Mục Keep Safe","Các mục đã đánh dấu Keep Safe có thể quản lý trong Cài đặt SpaceMint -> Mục Keep Safe."],["Lịch sử dọn dẹp","Mở Cài đặt SpaceMint -> Lịch sử dọn dẹp để xem hoặc xóa các phiên dọn dẹp trước."],["Sao lưu danh bạ","Bản sao lưu khi gộp hoặc xóa danh bạ nằm trong Cài đặt SpaceMint -> Sao lưu danh bạ."]]},
+    ja:{privacy:"プライバシー",terms:"利用規約",title:"どのようなサポートが必要ですか？",subtitle:"問題の内容をお知らせください。SpaceMintを再び快適に使えるようサポートします。",email:"サポートへメール",cards:[["写真の権限","iOS設定 -> SpaceMint -> 写真を開き、許可するアクセス範囲を選んでください。"],["連絡先の権限","連絡先クリーンアップをスキャンできない場合は、iOS設定 -> SpaceMint -> 連絡先を確認してください。"],["購入の復元","購入時のApple Accountでサインインした状態で、SpaceMint設定から購入を復元してください。"],["サブスクリプションの解約","iOS設定 -> Apple Account -> サブスクリプションで管理します。請求はAppleが処理します。"],["コンテンツの削除","削除前に候補を必ず確認してください。ローカルメディアの削除前にはSpaceMintが確認を表示します。"],["Keep Safe項目","Keep Safeにした項目はSpaceMint設定 -> Keep Safe項目で管理できます。"],["クリーンアップ履歴","SpaceMint設定 -> クリーンアップ履歴で過去のセッションを確認または消去できます。"],["連絡先バックアップ","連絡先の結合や削除のバックアップはSpaceMint設定 -> 連絡先バックアップで確認できます。"]]},
+    "zh-HK":{privacy:"私隱",terms:"條款",title:"有甚麼可以幫你？",subtitle:"告訴我們發生了甚麼事，我們會協助你讓 SpaceMint 回復正常。",email:"電郵支援",cards:[["相片權限","開啟 iOS 設定 -> SpaceMint -> 相片，選擇你想提供的存取權限。"],["聯絡人權限","如果聯絡人清理無法掃描，請開啟 iOS 設定 -> SpaceMint -> 聯絡人。"],["恢復購買","使用購買時的 Apple Account 登入，然後在 SpaceMint 設定選擇恢復購買。"],["取消訂閱","在 iOS 設定 -> Apple Account -> 訂閱中管理。付款由 Apple 處理。"],["刪除內容","刪除前請逐項檢查建議內容。SpaceMint 刪除本機媒體前一定會要求確認。"],["Keep Safe 項目","標記為 Keep Safe 的項目可在 SpaceMint 設定 -> Keep Safe 項目中管理。"],["清理記錄","開啟 SpaceMint 設定 -> 清理記錄，可查看或清除之前的清理工作。"],["聯絡人備份","合併或移除聯絡人的備份可在 SpaceMint 設定 -> 聯絡人備份中查看。"]]}};
+    const pick=()=>{if(localStorage.spacemintLang)return localStorage.spacemintLang;const lang=(navigator.language||"").toLowerCase();if(lang.startsWith("vi"))return"vi";if(lang.startsWith("ja"))return"ja";if(lang.startsWith("zh"))return"zh-HK";return"en"};
+    function render(lang=pick()){const t=L[lang]||L.en;document.documentElement.lang=lang;localStorage.spacemintLang=lang;document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.getElementById("cards").innerHTML=t.cards.map(([h,p])=>`<article class="card"><h2>${h}</h2><p>${p}</p></article>`).join("")}
+    document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>render(b.dataset.lang));render();
+  </script>
 </body>
 </html>
