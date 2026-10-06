@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Family Caring - Terms of Service</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --emerald: #10b981;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eef2ff;
+            --badge-text: #3730a3;
+            --lang-bar-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b1329;
+                --card-bg: #152238;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --border: #1e293b;
+                --badge-bg: #312e81;
+                --badge-text: #c7d2fe;
+                --lang-bar-bg: rgba(21, 34, 56, 0.85);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 16px 60px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Sticky Top Language Switcher Bar */
+        .sticky-top-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--lang-bar-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px 0;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .bar-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-switch-group {
+            display: inline-flex;
+            background: var(--border);
+            padding: 3px;
+            border-radius: 20px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 5px 14px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--card-bg);
+            color: var(--primary);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header Hero */
+        .hero {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .date-tag {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 14px;
+            display: block;
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+        }
+
+        .icon {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 6px;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Top Navigation & Language Switcher -->
+    <div class="sticky-top-bar">
+        <div class="bar-inner">
+            <div class="brand-logo">
+                <span>🛡️ Family Caring</span>
+            </div>
+            <div class="lang-switch-group">
+                <button class="lang-btn active" id="btn-vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
+                <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- VIETNAMESE CONTENT -->
+        <div id="content-vi" class="fade-in">
+            <div class="hero">
+                <span class="hero-badge">📜 ĐIỀU KHOẢN TIÊU CHUẨN</span>
+                <h1>Điều Khoản Dịch Vụ</h1>
+                <p class="hero-desc">Vui lòng đọc kỹ các điều khoản này trước khi tải xuống và sử dụng ứng dụng Family Caring. Việc tiếp tục sử dụng đồng nghĩa bạn đồng ý với các quy định dưới đây.</p>
+                <span class="date-tag">Cập nhật lần cuối: Tháng 10 năm 2026</span>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚠️</span> 1. Miễn Trừ Trách Nhiệm Y Tế & Cứu Hộ Khẩn Cấp</h2>
+                <ul>
+                    <li><strong>Công cụ hỗ trợ gia đình:</strong> Family Caring được phát triển như một công cụ hỗ trợ giao tiếp và mang lại sự an tâm cho các thành viên trong gia đình.</li>
+                    <li><strong>Không thay thế thiết bị y tế:</strong> Ứng dụng <strong>KHÔNG</strong> phải là thiết bị chẩn đoán y khoa chuyên dụng của bệnh viện và <strong>KHÔNG</strong> thay thế dịch vụ cứu hộ khẩn cấp 115 / 911.</li>
+                    <li><strong>Tình huống khẩn cấp:</strong> Khi người thân gặp tai nạn hoặc biến cố sức khỏe nghiêm trọng, bạn hãy luôn gọi ngay cho cơ quan y tế địa phương hoặc đường dây nóng cứu nạn.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📱</span> 2. Trách Nhiệm Của Người Dùng</h2>
+                <ul>
+                    <li><strong>Duy trì hoạt động của thiết bị:</strong> Người dùng cần đảm bảo điện thoại của người thân được sạc pin đầy đủ và cấp các quyền cảm biến cần thiết (Đếm bước chân, Thông báo đẩy, Định vị khi cần).</li>
+                    <li><strong>Sự đồng thuận trong gia đình:</strong> Bạn cam kết chỉ kết nối và theo dõi các thành viên khi đã có sự đồng ý và thống nhất từ phía người thân. Nghiêm cấm sử dụng ứng dụng cho các hành vi theo dõi lén lút bất hợp pháp.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🌐</span> 3. Tính Sẵn Sàng Của Dịch Vụ & Mạng Viễn Thông</h2>
+                <ul>
+                    <li>Các thông báo đẩy và đánh thức ngầm phụ thuộc vào hạ tầng mạng internet (Wi-Fi / 4G / 5G) và dịch vụ Apple Push Notification service (APNs).</li>
+                    <li>Chúng tôi nỗ lực duy trì độ sẵn sàng 99.9% của máy chủ nhưng không thể chịu trách nhiệm trong trường hợp gián đoạn do sự cố viễn thông diện rộng hoặc do điện thoại của người thân bị tắt nguồn / vào vùng mất sóng.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 4. Thay Đổi & Cập Nhật Điều Khoản</h2>
+                <ul>
+                    <li>Chúng tôi có quyền điều chỉnh nội dung điều khoản để phù hợp với sự nâng cấp tính năng của ứng dụng hoặc thay đổi quy định pháp luật.</li>
+                    <li>Mọi thay đổi quan trọng sẽ được thông báo trực tiếp trên ứng dụng hoặc trang web chính thức.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 5. Hỗ Trợ & Khiếu Nại</h2>
+                <p>Mọi thắc mắc và đóng góp ý kiến về Điều khoản dịch vụ, xin gửi về: <strong>support@familycaring.app</strong></p>
+            </div>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="hidden fade-in">
+            <div class="hero">
+                <span class="hero-badge">📜 STANDARD TERMS</span>
+                <h1>Terms of Service</h1>
+                <p class="hero-desc">Please read these Terms of Service carefully before using Family Caring. By downloading or accessing the app, you agree to be bound by these terms.</p>
+                <span class="date-tag">Last updated: October 2026</span>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚠️</span> 1. Emergency & Medical Disclaimer</h2>
+                <ul>
+                    <li><strong>Family Assistive Tool:</strong> Family Caring is designed solely as a communication and peace-of-mind tool for family members.</li>
+                    <li><strong>Not a Medical Device:</strong> This app is <strong>NOT</strong> a certified medical device, hospital monitoring system, or replacement for 911 / 115 emergency services.</li>
+                    <li><strong>Critical Emergencies:</strong> In any life-threatening situation, immediately contact your local emergency medical service or hotline directly.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📱</span> 2. User Responsibilities</h2>
+                <ul>
+                    <li><strong>Device Maintenance:</strong> Users agree to ensure proper device charging and grant necessary iOS permissions (Motion Tracking, Push Notifications, Location) for normal operation.</li>
+                    <li><strong>Mutual Consent:</strong> You agree to connect and monitor family members only with their full knowledge and consent. Stalking or non-consensual surveillance is strictly prohibited.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🌐</span> 3. Service Availability & Connectivity</h2>
+                <ul>
+                    <li>Real-time alerts and background wake-up signals depend on device cellular/Wi-Fi connection and Apple Push Notification service (APNs).</li>
+                    <li>While we strive for 99.9% uptime, we cannot guarantee uninterrupted performance during major telecommunication blackouts or if the user's phone is powered off.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 4. Modifications to Terms</h2>
+                <ul>
+                    <li>We reserve the right to modify these terms as needed to reflect new features or legal requirements.</li>
+                    <li>Significant updates will be communicated clearly within the application or on our website.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 5. Contact & Inquiries</h2>
+                <p>For questions or support regarding these Terms of Service, please contact us at: <strong>support@familycaring.app</strong></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Family Caring © 2026. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            const viDiv = document.getElementById('content-vi');
+            const enDiv = document.getElementById('content-en');
+            const btnVi = document.getElementById('btn-vi');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'vi') {
+                viDiv.classList.remove('hidden');
+                enDiv.classList.add('hidden');
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'vi';
+            } else {
+                viDiv.classList.add('hidden');
+                enDiv.classList.remove('hidden');
+                btnVi.classList.remove('active');
+                btnEn.classList.add('active');
+                document.documentElement.lang = 'en';
+            }
+            try {
+                localStorage.setItem('fc_user_lang', lang);
+            } catch(e) {}
+        }
+
+        // Language resolution priority:
+        // 1. URL Query Parameter ?lang=vi or ?lang=en
+        // 2. localStorage saved preference
+        // 3. Browser / Device system language
+        (function initLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const queryLang = urlParams.get('lang');
+            
+            if (queryLang && (queryLang === 'vi' || queryLang === 'en')) {
+                setLang(queryLang);
+                return;
+            }
+
+            try {
+                const savedLang = localStorage.getItem('fc_user_lang');
+                if (savedLang && (savedLang === 'vi' || savedLang === 'en')) {
+                    setLang(savedLang);
+                    return;
+                }
+            } catch(e) {}
+
+            const userLang = navigator.language || navigator.userLanguage || 'vi';
+            if (userLang.startsWith('en')) {
+                setLang('en');
+            } else {
+                setLang('vi');
+            }
+        })();
+    </script>
+</body>
+</html>
