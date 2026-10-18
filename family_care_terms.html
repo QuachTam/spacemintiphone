@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Family Caring - Terms of Service</title>
+    <title>Family Caring - Terms of Service / Điều Khoản Dịch Vụ / 利用規約</title>
     <style>
         :root {
             --primary: #6366f1;
@@ -16,7 +17,7 @@
             --border: #e2e8f0;
             --badge-bg: #eef2ff;
             --badge-text: #3730a3;
-            --lang-bar-bg: rgba(255, 255, 255, 0.85);
+            --lang-bar-bg: rgba(255, 255, 255, 0.88);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -28,7 +29,7 @@
                 --border: #1e293b;
                 --badge-bg: #312e81;
                 --badge-text: #c7d2fe;
-                --lang-bar-bg: rgba(21, 34, 56, 0.85);
+                --lang-bar-bg: rgba(21, 34, 56, 0.88);
             }
         }
 
@@ -39,10 +40,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
             padding: 0 16px 60px;
             -webkit-font-smoothing: antialiased;
         }
@@ -55,7 +56,7 @@
             background: var(--lang-bar-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 12px 0;
+            padding: 10px 0;
             margin-bottom: 16px;
             border-bottom: 1px solid var(--border);
         }
@@ -66,6 +67,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .brand-logo {
@@ -89,12 +92,13 @@
             background: transparent;
             border: none;
             color: var(--text-muted);
-            padding: 5px 14px;
+            padding: 5px 11px;
             border-radius: 16px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         .lang-btn.active {
@@ -143,7 +147,7 @@
         .hero-desc {
             color: var(--text-muted);
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         .date-tag {
@@ -196,7 +200,7 @@
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         li::before {
@@ -213,6 +217,24 @@
             font-weight: 600;
         }
 
+        code {
+            background: var(--border);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12.5px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .footer {
             text-align: center;
             font-size: 12px;
@@ -227,8 +249,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hidden {
@@ -236,6 +265,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Sticky Top Navigation & Language Switcher -->
     <div class="sticky-top-bar">
@@ -246,104 +276,297 @@
             <div class="lang-switch-group">
                 <button class="lang-btn active" id="btn-vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
                 <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+                <button class="lang-btn" id="btn-ja" onclick="setLang('ja')">🇯🇵 日本語</button>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- VIETNAMESE CONTENT -->
+        <!-- ========================================== -->
+        <!-- VIETNAMESE CONTENT                         -->
+        <!-- ========================================== -->
         <div id="content-vi" class="fade-in">
             <div class="hero">
                 <span class="hero-badge">📜 ĐIỀU KHOẢN TIÊU CHUẨN</span>
                 <h1>Điều Khoản Dịch Vụ</h1>
-                <p class="hero-desc">Vui lòng đọc kỹ các điều khoản này trước khi tải xuống và sử dụng ứng dụng Family Caring. Việc tiếp tục sử dụng đồng nghĩa bạn đồng ý với các quy định dưới đây.</p>
+                <p class="hero-desc">Vui lòng đọc kỹ các điều khoản này trước khi tải xuống và sử dụng ứng dụng Family Caring.
+                    Việc tiếp tục sử dụng đồng nghĩa bạn đồng ý với toàn bộ các quy định dưới đây.</p>
                 <span class="date-tag">Cập nhật lần cuối: Tháng 10 năm 2026</span>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">⚠️</span> 1. Miễn Trừ Trách Nhiệm Y Tế & Cứu Hộ Khẩn Cấp</h2>
                 <ul>
-                    <li><strong>Công cụ hỗ trợ gia đình:</strong> Family Caring được phát triển như một công cụ hỗ trợ giao tiếp và mang lại sự an tâm cho các thành viên trong gia đình.</li>
-                    <li><strong>Không thay thế thiết bị y tế:</strong> Ứng dụng <strong>KHÔNG</strong> phải là thiết bị chẩn đoán y khoa chuyên dụng của bệnh viện và <strong>KHÔNG</strong> thay thế dịch vụ cứu hộ khẩn cấp 115 / 911.</li>
-                    <li><strong>Tình huống khẩn cấp:</strong> Khi người thân gặp tai nạn hoặc biến cố sức khỏe nghiêm trọng, bạn hãy luôn gọi ngay cho cơ quan y tế địa phương hoặc đường dây nóng cứu nạn.</li>
+                    <li><strong>Công cụ hỗ trợ gia đình:</strong> Family Caring được phát triển như một công cụ hỗ trợ liên
+                        lạc và mang lại sự an tâm cho các thành viên trong gia đình.</li>
+                    <li><strong>Không thay thế thiết bị y tế:</strong> Ứng dụng <strong>KHÔNG</strong> phải là thiết bị y tế,
+                        hệ thống giám sát bệnh viện và <strong>KHÔNG</strong> thay thế các dịch vụ cứu hộ khẩn cấp chính thức
+                        (115 tại Việt Nam, 119 tại Nhật Bản, 911 tại Hoa Kỳ).</li>
+                    <li><strong>Tình huống nguy cấp:</strong> Khi người thân gặp biến cố sức khỏe nghiêm trọng hoặc tình huống
+                        đe dọa tính mạng, hãy luôn gọi ngay cho cơ quan y tế địa phương hoặc đường dây nóng cứu hộ khẩn cấp
+                        thay vì phụ thuộc vào ứng dụng.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">📱</span> 2. Trách Nhiệm Của Người Dùng</h2>
+                <h2><span class="icon">📱</span> 2. Trách Nhiệm Người Dùng & Sự Đồng Thuận Gia Đình</h2>
                 <ul>
-                    <li><strong>Duy trì hoạt động của thiết bị:</strong> Người dùng cần đảm bảo điện thoại của người thân được sạc pin đầy đủ và cấp các quyền cảm biến cần thiết (Đếm bước chân, Thông báo đẩy, Định vị khi cần).</li>
-                    <li><strong>Sự đồng thuận trong gia đình:</strong> Bạn cam kết chỉ kết nối và theo dõi các thành viên khi đã có sự đồng ý và thống nhất từ phía người thân. Nghiêm cấm sử dụng ứng dụng cho các hành vi theo dõi lén lút bất hợp pháp.</li>
+                    <li><strong>Duy trì thiết bị hoạt động:</strong> Người dùng có trách nhiệm giữ điện thoại/đồng hồ được sạc
+                        pin đầy đủ, duy trì kết nối Internet và cấp các quyền cảm biến cần thiết (Đếm bước chân, Thông báo
+                        đẩy, Định vị an toàn khi cần).</li>
+                    <li><strong>Sự đồng thuận tuyệt đối:</strong> Bạn cam kết chỉ kết nối và xem thông tin của người thân khi
+                        đã có sự đồng ý rõ ràng và thống nhất từ phía họ. Nghiêm cấm mọi hành vi sử dụng ứng dụng vào mục đích
+                        theo dõi lén lút, rình rập hoặc xâm phạm quyền riêng tư bất hợp pháp.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">🌐</span> 3. Tính Sẵn Sàng Của Dịch Vụ & Mạng Viễn Thông</h2>
+                <h2><span class="icon">💎</span> 3. Gói Đăng Ký, Thanh Toán & Thỏa Thuận Apple EULA</h2>
                 <ul>
-                    <li>Các thông báo đẩy và đánh thức ngầm phụ thuộc vào hạ tầng mạng internet (Wi-Fi / 4G / 5G) và dịch vụ Apple Push Notification service (APNs).</li>
-                    <li>Chúng tôi nỗ lực duy trì độ sẵn sàng 99.9% của máy chủ nhưng không thể chịu trách nhiệm trong trường hợp gián đoạn do sự cố viễn thông diện rộng hoặc do điện thoại của người thân bị tắt nguồn / vào vùng mất sóng.</li>
+                    <li><strong>Thanh toán qua Apple StoreKit:</strong> Mọi giao dịch mua hàng hoặc gói đăng ký nâng cao
+                        (Subscription) trong ứng dụng đều được xử lý và bảo mật qua Apple App Store. Khoản phí sẽ được tính
+                        vào tài khoản Apple ID của bạn khi xác nhận mua.</li>
+                    <li><strong>Tự động gia hạn:</strong> Gói đăng ký sẽ tự động gia hạn trừ khi bạn hủy trước ít nhất 24 giờ
+                        so với thời điểm kết thúc kỳ cước hiện tại trong phần cài đặt tài khoản Apple ID của bạn (Cài đặt iOS >
+                        Apple ID > Gói đăng ký).</li>
+                    <li><strong>Khôi phục giao dịch:</strong> Bạn có thể khôi phục lại các gói đăng ký đã mua bất kỳ lúc nào qua
+                        nút <em>"Khôi phục giao dịch (Restore Purchases)"</em> trong ứng dụng.</li>
+                    <li><strong>Thỏa thuận bản quyền người dùng cuối (EULA):</strong> Việc sử dụng ứng dụng được điều chỉnh bởi
+                        Điều khoản dịch vụ này và Thỏa thuận cấp phép tiêu chuẩn của Apple (<a
+                            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank"
+                            rel="noopener">Apple Standard EULA</a>).</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">⚖️</span> 4. Thay Đổi & Cập Nhật Điều Khoản</h2>
+                <h2><span class="icon">🌐</span> 4. Tính Sẵn Sàng Của Dịch Vụ & Viễn Thông</h2>
                 <ul>
-                    <li>Chúng tôi có quyền điều chỉnh nội dung điều khoản để phù hợp với sự nâng cấp tính năng của ứng dụng hoặc thay đổi quy định pháp luật.</li>
-                    <li>Mọi thay đổi quan trọng sẽ được thông báo trực tiếp trên ứng dụng hoặc trang web chính thức.</li>
+                    <li>Thông báo đẩy và đánh thức ngầm phụ thuộc vào hạ tầng mạng viễn thông (Wi-Fi, 4G, 5G) và dịch vụ Apple
+                        Push Notification service (APNs).</li>
+                    <li>Chúng tôi nỗ lực duy trì độ sẵn sàng 99.9% của hệ thống máy chủ, tuy nhiên không chịu trách nhiệm đối
+                        với các sự cố gián đoạn do nhà mạng viễn thông, thiết bị hết pin, tắt nguồn hoặc vào khu vực mất sóng.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">✉️</span> 5. Hỗ Trợ & Khiếu Nại</h2>
-                <p>Mọi thắc mắc và đóng góp ý kiến về Điều khoản dịch vụ, xin gửi về: <strong>support@familycaring.app</strong></p>
+                <h2><span class="icon">🚫</span> 5. Hành Vi Bị Nghiêm Cấm & Sở Hữu Trí Tuệ</h2>
+                <ul>
+                    <li><strong>Hành vi cấm:</strong> Nghiêm cấm hành vi dịch ngược (reverse engineering), can thiệp mã nguồn,
+                        tấn công gây quá tải máy chủ, cào dữ liệu trái phép hoặc sử dụng ứng dụng cho các hành vi vi phạm pháp luật.</li>
+                    <li><strong>Sở hữu trí tuệ:</strong> Toàn bộ giao diện, hình ảnh, nhãn hiệu, logic nghiệp vụ và mã nguồn
+                        của ứng dụng thuộc quyền sở hữu trí tuệ độc quyền của SmartGroup và Family Caring Team.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. Giới Hạn Trách Nhiệm Pháp Lý</h2>
+                <ul>
+                    <li>Dịch vụ được cung cấp trên nguyên tắc <strong>"NGUYÊN TRẠNG" (AS IS)</strong> và <strong>"TÙY THEO
+                            KHẢ NĂNG SẴN CÓ" (AS AVAILABLE)</strong>.</li>
+                    <li>Trong phạm vi pháp luật cho phép, nhà phát triển không chịu trách nhiệm bồi thường đối với các thiệt hại
+                        gián tiếp, ngẫu nhiên hoặc do nguyên nhân bất khả kháng xuất phát từ việc mất kết nối mạng hay chậm trễ
+                        thông báo.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📝</span> 7. Chấm Dứt Sử Dụng & Thay Đổi Điều Khoản</h2>
+                <ul>
+                    <li>Chúng tôi có quyền điều chỉnh nội dung điều khoản để phù hợp với các bản cập nhật tính năng mới hoặc quy
+                        định pháp lý. Các thay đổi quan trọng sẽ được cập nhật công khai trên tài liệu này.</li>
+                    <li>Bạn có thể chấm dứt thỏa thuận sử dụng bất kỳ lúc nào bằng cách xóa tài khoản vĩnh viễn trong Cài đặt
+                        hoặc gỡ cài đặt ứng dụng.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 8. Hỗ Trợ & Khiếu Nại</h2>
+                <p>Mọi thắc mắc, đóng góp ý kiến hoặc yêu cầu hỗ trợ về Điều khoản dịch vụ, xin gửi về:</p>
+                <p>📧 Email hỗ trợ: <strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 Đội ngũ phát triển: SmartGroup / Family Caring Team</p>
             </div>
         </div>
 
-        <!-- ENGLISH CONTENT -->
+        <!-- ========================================== -->
+        <!-- ENGLISH CONTENT                            -->
+        <!-- ========================================== -->
         <div id="content-en" class="hidden fade-in">
             <div class="hero">
                 <span class="hero-badge">📜 STANDARD TERMS</span>
                 <h1>Terms of Service</h1>
-                <p class="hero-desc">Please read these Terms of Service carefully before using Family Caring. By downloading or accessing the app, you agree to be bound by these terms.</p>
+                <p class="hero-desc">Please read these Terms of Service carefully before downloading or using Family Caring.
+                    By downloading or accessing the app, you agree to be bound by these terms.</p>
                 <span class="date-tag">Last updated: October 2026</span>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">⚠️</span> 1. Emergency & Medical Disclaimer</h2>
                 <ul>
-                    <li><strong>Family Assistive Tool:</strong> Family Caring is designed solely as a communication and peace-of-mind tool for family members.</li>
-                    <li><strong>Not a Medical Device:</strong> This app is <strong>NOT</strong> a certified medical device, hospital monitoring system, or replacement for 911 / 115 emergency services.</li>
-                    <li><strong>Critical Emergencies:</strong> In any life-threatening situation, immediately contact your local emergency medical service or hotline directly.</li>
+                    <li><strong>Family Assistive Tool:</strong> Family Caring is designed solely as a communication and
+                        peace-of-mind tool for family members.</li>
+                    <li><strong>Not a Medical Device:</strong> This app is <strong>NOT</strong> a certified medical device,
+                        hospital monitoring system, or replacement for official emergency services (911 in the US, 119 in
+                        Japan, 115 in Vietnam).</li>
+                    <li><strong>Critical Emergencies:</strong> In any life-threatening situation or serious medical crisis,
+                        always contact your local emergency medical service or official hotline directly.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">📱</span> 2. User Responsibilities</h2>
+                <h2><span class="icon">📱</span> 2. User Responsibilities & Mutual Consent</h2>
                 <ul>
-                    <li><strong>Device Maintenance:</strong> Users agree to ensure proper device charging and grant necessary iOS permissions (Motion Tracking, Push Notifications, Location) for normal operation.</li>
-                    <li><strong>Mutual Consent:</strong> You agree to connect and monitor family members only with their full knowledge and consent. Stalking or non-consensual surveillance is strictly prohibited.</li>
+                    <li><strong>Device Maintenance:</strong> Users agree to ensure proper device battery charging, maintain
+                        internet connectivity, and grant necessary iOS permissions (Motion Tracking, Push Notifications,
+                        Location) for standard operation.</li>
+                    <li><strong>Mutual Consent:</strong> You agree to connect and monitor family members only with their
+                        explicit knowledge and mutual agreement. Stalking, non-consensual surveillance, or covert monitoring
+                        is strictly prohibited.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">🌐</span> 3. Service Availability & Connectivity</h2>
+                <h2><span class="icon">💎</span> 3. Subscriptions, Payments & Apple EULA</h2>
                 <ul>
-                    <li>Real-time alerts and background wake-up signals depend on device cellular/Wi-Fi connection and Apple Push Notification service (APNs).</li>
-                    <li>While we strive for 99.9% uptime, we cannot guarantee uninterrupted performance during major telecommunication blackouts or if the user's phone is powered off.</li>
+                    <li><strong>Apple In-App Purchases:</strong> All subscriptions and in-app purchases are securely processed
+                        via Apple StoreKit. Payment will be charged to your Apple ID account upon purchase confirmation.</li>
+                    <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless auto-renew is turned off at least
+                        24 hours before the end of the current billing cycle in your Apple ID Account Settings (iOS Settings >
+                        Apple ID > Subscriptions).</li>
+                    <li><strong>Restore Purchases:</strong> You may restore your previous purchases at any time using the
+                        <em>"Restore Purchases"</em> option inside the app.</li>
+                    <li><strong>Standard EULA:</strong> In addition to these Terms, usage of the app is governed by Apple's
+                        Standard Licensed Application End User License Agreement (<a
+                            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank"
+                            rel="noopener">Apple Standard EULA</a>).</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">⚖️</span> 4. Modifications to Terms</h2>
+                <h2><span class="icon">🌐</span> 4. Service Availability & Connectivity</h2>
                 <ul>
-                    <li>We reserve the right to modify these terms as needed to reflect new features or legal requirements.</li>
-                    <li>Significant updates will be communicated clearly within the application or on our website.</li>
+                    <li>Real-time alerts and background wake-up signals depend on device cellular/Wi-Fi connection and the
+                        Apple Push Notification service (APNs).</li>
+                    <li>While we strive for 99.9% uptime, we cannot guarantee uninterrupted performance during major
+                        telecommunication blackouts or if the user's phone is powered off or outside network coverage.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">✉️</span> 5. Contact & Inquiries</h2>
-                <p>For questions or support regarding these Terms of Service, please contact us at: <strong>support@familycaring.app</strong></p>
+                <h2><span class="icon">🚫</span> 5. Prohibited Conduct & Intellectual Property</h2>
+                <ul>
+                    <li><strong>Prohibited Actions:</strong> You may not reverse engineer, decompile, scrape, overburden our
+                        servers, or use the service for unauthorized or illegal tracking.</li>
+                    <li><strong>Intellectual Property:</strong> All software code, user interface designs, logos, and trademarks
+                        remain the exclusive intellectual property of SmartGroup and Family Caring Team.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. Limitation of Liability</h2>
+                <ul>
+                    <li>The service is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis
+                        without warranties of any kind.</li>
+                    <li>To the fullest extent permitted by applicable law, SmartGroup shall not be liable for any indirect,
+                        incidental, or consequential damages resulting from network interruptions or missed alerts.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📝</span> 7. Modifications & Account Termination</h2>
+                <ul>
+                    <li>We reserve the right to modify these terms as needed to reflect new features or legal requirements.
+                        Major updates will be reflected in this document.</li>
+                    <li>You may terminate this agreement at any time by permanently deleting your account in the app Settings
+                        or uninstalling the app.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 8. Contact & Inquiries</h2>
+                <p>For questions or support regarding these Terms of Service, please contact us at:</p>
+                <p>📧 Support Email: <strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 Development Team: SmartGroup / Family Caring Team</p>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- JAPANESE CONTENT (日本語)                   -->
+        <!-- ========================================== -->
+        <div id="content-ja" class="hidden fade-in">
+            <div class="hero">
+                <span class="hero-badge">📜 利用規約・重要事項</span>
+                <h1>利用規約</h1>
+                <p class="hero-desc">Family Caring（ファミリーケア）をご利用いただきありがとうございます。
+                    本アプリをダウンロードまたはご利用になる前に、本利用規約をよくお読みください。ご利用を継続することにより、本規約に同意したものとみなされます。</p>
+                <span class="date-tag">最終更新日：2026年10月</span>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚠️</span> 1. 緊急対応および医療に関する免責事項</h2>
+                <ul>
+                    <li><strong>家族向け安心支援ツール：</strong>Family Caringは、ご家族間の連絡および日常の安否確認をサポートするための補助ツールです。</li>
+                    <li><strong>医療機器ではありません：</strong>本アプリは<strong>医療機器、病院用バイタル監視システム、または119番（消防・救急）等の公的緊急通報サービスに代わるものではありません</strong>。</li>
+                    <li><strong>緊急時の対応：</strong>生命に関わる緊急事態や重大な体調不良が発生した場合は、アプリに依存せず、直ちに119番通報または最寄りの医療機関へ直接ご連絡ください。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📱</span> 2. ユーザーの責任と家族間の合意</h2>
+                <ul>
+                    <li><strong>端末環境の維持：</strong>ユーザーは、対象端末が正常に充電され、インターネット通信が可能であり、必要な権限（モーションとフィットネス、通知、位置情報）が有効になっている状態を維持する責任を負います。</li>
+                    <li><strong>家族間の明確な合意：</strong>本アプリによる見守りおよび位置・活動情報の共有は、必ず双方の事前の明確な同意に基づいて行われるものとします。不正な監視、ストーカー行為、同意のない追跡目的での利用は固く禁止します。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">💎</span> 3. サブスクリプション、課金およびApple利用規約（EULA）</h2>
+                <ul>
+                    <li><strong>Apple StoreKitによる安全な決済：</strong>有料プラン（サブスクリプション）の購入およびお支払いは、Apple App Storeを通じて安全に処理され、購入確認時にApple IDアカウントに請求されます。</li>
+                    <li><strong>自動更新：</strong>現在の契約期間が終了する24時間以上前に自動更新を解除しない限り、サブスクリプションは自動的に更新されます。iOSの「設定」＞「Apple ID」＞「サブスクリプション」からいつでも解約できます。</li>
+                    <li><strong>購入の復元：</strong>機種変更や再インストール時は、アプリ内の<em>「購入の復元（Restore Purchases）」</em>機能により以前購入したプランを復元できます。</li>
+                    <li><strong>標準EULAの適用：</strong>本規約に加え、Appleの標準エンドユーザーライセンス契約（<a
+                            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank"
+                            rel="noopener">Apple Standard EULA</a>）が適用されます。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🌐</span> 4. サービスの提供状況と通信環境</h2>
+                <ul>
+                    <li>リアルタイム通知およびバックグラウンド同期は、インターネット通信環境（Wi-Fi / 4G / 5G）およびApple Push Notification service（APNs）の稼働状況に依存します。</li>
+                    <li>当社はサーバーの安定稼働に努めますが、通信事業者の回線障害、端末のバッテリー切れ、電源オフ、圏外による通知の遅延や未達について、当社は責任を負いかねます。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🚫</span> 5. 禁止事項および知的財産権</h2>
+                <ul>
+                    <li><strong>禁止行為：</strong>本アプリのリバースエンジニアリング、逆コンパイル、不正アクセス、サーバーへの過剰な負荷、自動スクレイピング、または違法な監視行為を固く禁じます。</li>
+                    <li><strong>知的財産権：</strong>本アプリに含まれるプログラムコード、ユーザーインターフェース、デザイン、商標、ロゴ等のすべての知的財産権は、SmartGroupおよび開発チームに帰属します。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. 免責事項および責任の制限</h2>
+                <ul>
+                    <li>本サービスは<strong>「現状有姿（AS IS）」</strong>かつ<strong>「提供可能な範囲」</strong>で提供されます。</li>
+                    <li>通信障害、端末のバッテリー切れ、天災等に起因する通知の遅延や不達により生じた間接的・派生的な損害について、当社は適用法令が許容する最大限の範囲において一切の責任を負いません。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📝</span> 7. 規約の変更およびアカウントの終了</h2>
+                <ul>
+                    <li>当社は、法令の改正や機能の改善に伴い、本規約を改定することがあります。重要な変更は本ページにて告知します。</li>
+                    <li>ユーザーは、アプリ内の設定からアカウントを完全に削除するか、アプリを削除することにより、いつでも本利用規約の同意を解除できます。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 8. お問い合わせ・サポート窓口</h2>
+                <p>本利用規約に関するご質問、ご意見、またはサポートのご依頼は、下記窓口までご連絡ください。</p>
+                <p>📧 サポートメール：<strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 開発・運営：SmartGroup / Family Caring 開発チーム</p>
             </div>
         </div>
 
@@ -356,50 +579,63 @@
         function setLang(lang) {
             const viDiv = document.getElementById('content-vi');
             const enDiv = document.getElementById('content-en');
+            const jaDiv = document.getElementById('content-ja');
             const btnVi = document.getElementById('btn-vi');
             const btnEn = document.getElementById('btn-en');
+            const btnJa = document.getElementById('btn-ja');
 
-            if (lang === 'vi') {
-                viDiv.classList.remove('hidden');
-                enDiv.classList.add('hidden');
-                btnVi.classList.add('active');
-                btnEn.classList.remove('active');
-                document.documentElement.lang = 'vi';
-            } else {
-                viDiv.classList.add('hidden');
+            // Hide all
+            viDiv.classList.add('hidden');
+            enDiv.classList.add('hidden');
+            jaDiv.classList.add('hidden');
+            btnVi.classList.remove('active');
+            btnEn.classList.remove('active');
+            btnJa.classList.remove('active');
+
+            if (lang === 'ja') {
+                jaDiv.classList.remove('hidden');
+                btnJa.classList.add('active');
+                document.documentElement.lang = 'ja';
+            } else if (lang === 'en') {
                 enDiv.classList.remove('hidden');
-                btnVi.classList.remove('active');
                 btnEn.classList.add('active');
                 document.documentElement.lang = 'en';
+            } else {
+                viDiv.classList.remove('hidden');
+                btnVi.classList.add('active');
+                document.documentElement.lang = 'vi';
             }
+
             try {
                 localStorage.setItem('fc_user_lang', lang);
-            } catch(e) {}
+            } catch (e) { }
         }
 
         // Language resolution priority:
-        // 1. URL Query Parameter ?lang=vi or ?lang=en
+        // 1. URL Query Parameter ?lang=vi or ?lang=en or ?lang=ja
         // 2. localStorage saved preference
         // 3. Browser / Device system language
         (function initLanguage() {
             const urlParams = new URLSearchParams(window.location.search);
             const queryLang = urlParams.get('lang');
-            
-            if (queryLang && (queryLang === 'vi' || queryLang === 'en')) {
+
+            if (queryLang && ['vi', 'en', 'ja'].includes(queryLang)) {
                 setLang(queryLang);
                 return;
             }
 
             try {
                 const savedLang = localStorage.getItem('fc_user_lang');
-                if (savedLang && (savedLang === 'vi' || savedLang === 'en')) {
+                if (savedLang && ['vi', 'en', 'ja'].includes(savedLang)) {
                     setLang(savedLang);
                     return;
                 }
-            } catch(e) {}
+            } catch (e) { }
 
-            const userLang = navigator.language || navigator.userLanguage || 'vi';
-            if (userLang.startsWith('en')) {
+            const userLang = (navigator.language || navigator.userLanguage || 'vi').toLowerCase();
+            if (userLang.startsWith('ja')) {
+                setLang('ja');
+            } else if (userLang.startsWith('en')) {
                 setLang('en');
             } else {
                 setLang('vi');
@@ -407,4 +643,5 @@
         })();
     </script>
 </body>
+
 </html>

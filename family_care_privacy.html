@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Family Caring - Privacy Policy</title>
+    <title>Family Caring - Privacy Policy / Chính Sách Quyền Riêng Tư / プライバシーポリシー</title>
     <style>
         :root {
             --primary: #10b981;
@@ -17,7 +17,7 @@
             --border: #e2e8f0;
             --badge-bg: #ecfdf5;
             --badge-text: #065f46;
-            --lang-bar-bg: rgba(255, 255, 255, 0.85);
+            --lang-bar-bg: rgba(255, 255, 255, 0.88);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -29,7 +29,7 @@
                 --border: #1e293b;
                 --badge-bg: #064e3b;
                 --badge-text: #6ee7b7;
-                --lang-bar-bg: rgba(21, 34, 56, 0.85);
+                --lang-bar-bg: rgba(21, 34, 56, 0.88);
             }
         }
 
@@ -40,10 +40,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
             padding: 0 16px 60px;
             -webkit-font-smoothing: antialiased;
         }
@@ -56,7 +56,7 @@
             background: var(--lang-bar-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 12px 0;
+            padding: 10px 0;
             margin-bottom: 16px;
             border-bottom: 1px solid var(--border);
         }
@@ -67,6 +67,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .brand-logo {
@@ -90,12 +92,13 @@
             background: transparent;
             border: none;
             color: var(--text-muted);
-            padding: 5px 14px;
+            padding: 5px 11px;
             border-radius: 16px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         .lang-btn.active {
@@ -144,7 +147,7 @@
         .hero-desc {
             color: var(--text-muted);
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         .date-tag {
@@ -197,7 +200,7 @@
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         li::before {
@@ -212,6 +215,24 @@
         strong {
             color: var(--text-main);
             font-weight: 600;
+        }
+
+        code {
+            background: var(--border);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12.5px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .footer {
@@ -255,57 +276,68 @@
             <div class="lang-switch-group">
                 <button class="lang-btn active" id="btn-vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
                 <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+                <button class="lang-btn" id="btn-ja" onclick="setLang('ja')">🇯🇵 日本語</button>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- VIETNAMESE CONTENT -->
+        <!-- ========================================== -->
+        <!-- VIETNAMESE CONTENT                         -->
+        <!-- ========================================== -->
         <div id="content-vi" class="fade-in">
             <div class="hero">
                 <span class="hero-badge">🛡️ BẢO MẬT TỪ THIẾT KẾ</span>
                 <h1>Chính Sách Quyền Riêng Tư</h1>
                 <p class="hero-desc">Family Caring được xây dựng với nguyên tắc bảo vệ quyền riêng tư nghiêm ngặt nhất.
-                    Dữ liệu sức khỏe và chuyển động sinh hoạt chỉ thuộc về bạn và những người thân bạn chủ động kết nối.
-                </p>
+                    Dữ liệu sinh hoạt và chăm sóc chỉ thuộc về bạn và những người thân bạn chủ động kết nối.</p>
                 <span class="date-tag">Cập nhật lần cuối: Tháng 10 năm 2026</span>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">📊</span> 1. Dữ Liệu Chúng Tôi Thu Thập & Mục Đích</h2>
                 <ul>
-                    <li><strong>Vận động & Số bước chân (CoreMotion):</strong> Ứng dụng đọc số bước chân chỉ nhằm mục
-                        đích phát hiện người thân có sinh hoạt buổi sáng hay không để báo an tâm cho con cháu. Chúng tôi
-                        không thu thập dữ liệu tập luyện thể thao chuyên sâu.</li>
-                    <li><strong>Mức pin & Trạng thái sạc:</strong> Hệ thống giám sát dung lượng pin để gửi cảnh báo khi
-                        điện thoại dưới 15% mà chưa cắm sạc, giúp gia đình kịp thời nhắc nhở và tránh các báo động giả
-                        khi máy sập nguồn.</li>
-                    <li><strong>Vị trí GPS:</strong> Vị trí chỉ được ghi nhận khi người dùng chủ động bấm nút <em>"Tôi
-                            Vẫn Khỏe 👍"</em> hoặc khi gửi báo cáo điểm danh an toàn, giúp người thân xác định vị trí
-                        trong tình huống khẩn cấp.</li>
-                    <li><strong>Lịch uống thuốc:</strong> Thông tin tên thuốc và giờ uống được lưu trữ để nhắc nhở người
-                        thân uống đúng giờ.</li>
+                    <li><strong>Vận động & Số bước chân (CoreMotion / HealthKit):</strong> Đọc số bước chân nhằm phát
+                        hiện người thân có sinh hoạt buổi sáng hay không để báo an tâm cho con cháu. Chúng tôi không thu
+                        thập dữ liệu thể thao chuyên sâu và không lập hồ sơ thương mại.</li>
+                    <li><strong>Mức pin & Trạng thái sạc:</strong> Giám sát dung lượng pin để gửi cảnh báo khi thiết bị
+                        dưới 15% mà chưa sạc, giúp gia đình kịp thời nhắc nhở và phòng ngừa báo động giả khi máy sập
+                        nguồn.</li>
+                    <li><strong>Vị trí GPS:</strong> Tọa độ chỉ được ghi nhận khi người dùng chủ động bấm nút <em>"Tôi
+                            Vẫn Khỏe 👍"</em> hoặc khi gửi báo cáo điểm danh khẩn cấp. Chúng tôi không theo dõi liên
+                        tục ngầm vị trí của bạn; bạn có thể tùy chỉnh hoặc thu hồi quyền Vị trí bất kỳ lúc nào trong Cài
+                        đặt iOS.</li>
+                    <li><strong>Lịch uống thuốc & Nhắc nhở:</strong> Tên thuốc và giờ uống được lưu trữ an toàn để gửi
+                        thông báo nhắc người thân uống đúng giờ.</li>
+                    <li><strong>Thông tin tài khoản:</strong> Tên hiển thị, địa chỉ email (thông qua Đăng nhập bằng
+                        Google hoặc Apple), và Mã thành viên duy nhất (<code>FT-XXXXXX</code>) để phục vụ ghép đôi nội
+                        bộ gia đình.</li>
+                    <li><strong>Thông báo đẩy (APNs):</strong> Mã Token thiết bị của Apple Push Notification service chỉ
+                        dùng để gửi cảnh báo an toàn và nhắc nhở giữa các thành viên.</li>
+                    <li><strong>Apple Watch & Dữ liệu sức khỏe:</strong> Với thiết bị Apple Watch kết nối, dữ liệu số
+                        bước chân và nhịp tim đọc qua HealthKit chỉ dùng để phát hiện hoạt động buổi sáng. <strong>Tuyệt
+                            đối không sử dụng dữ liệu HealthKit cho mục đích quảng cáo, tiếp thị, hoặc chia sẻ cho bên thứ
+                            ba</strong> (tuân thủ Apple Review Guideline 5.1.1(i)).</li>
                 </ul>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">🚫</span> 2. Cam Kết Không Theo Dõi & Không Quảng Cáo</h2>
                 <ul>
-                    <li><strong>Không bán dữ liệu:</strong> Chúng tôi TUYỆT ĐỐI KHÔNG bán, cho thuê hoặc chia sẻ bất kỳ
-                        thông tin cá nhân nào với các nhà quảng cáo hoặc đối tác bên thứ ba.</li>
-                    <li><strong>Không theo dõi liên ứng dụng (No IDFA tracking):</strong> Ứng dụng không thu thập mã
-                        định danh quảng cáo và không theo dõi hành vi của bạn trên các trang web hoặc ứng dụng khác.
-                    </li>
-                    <li><strong>Mã hóa đầu cuối:</strong> Toàn bộ dữ liệu truyền tải giữa thiết bị và máy chủ đều được
-                        bảo vệ bằng giao thức chuẩn HTTPS/TLS an toàn.</li>
+                    <li><strong>Tuyệt đối không bán dữ liệu:</strong> Chúng tôi KHÔNG bán, cho thuê hoặc thương mại hóa
+                        bất kỳ dữ liệu cá nhân nào với các nhà quảng cáo hoặc bên trung gian dữ liệu (Data Brokers).</li>
+                    <li><strong>Không theo dõi liên ứng dụng (No IDFA tracking):</strong> Chúng tôi không thu thập mã
+                        định danh quảng cáo IDFA và không theo dõi hành vi của bạn qua các ứng dụng hoặc website khác.</li>
+                    <li><strong>Mã hóa chuẩn cao:</strong> Toàn bộ dữ liệu truyền tải giữa thiết bị và máy chủ được mã hóa
+                        bảo vệ bằng giao thức chuẩn HTTPS/TLS 1.3 an toàn.</li>
                 </ul>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">👨‍👩‍👧‍👦</span> 3. Phạm Vi Chia Sẻ Dữ Liệu Gia Đình</h2>
                 <ul>
-                    <li>Dữ liệu sinh hoạt, bước chân và trạng thái cữ thuốc chỉ được hiển thị cho những người thân đã
-                        ghép đôi trực tiếp qua Mã QR hoặc Mã thành viên duy nhất (<code>FT-XXXXXX</code>).</li>
+                    <li>Dữ liệu sinh hoạt, bước chân, mức pin và trạng thái điểm danh chỉ hiển thị duy nhất cho các thành
+                        viên đã ghép đôi trực tiếp qua Mã QR hoặc Mã thành viên (<code>FT-XXXXXX</code>).</li>
                     <li>Bạn có toàn quyền xóa hoặc hủy liên kết người theo dõi bất cứ lúc nào trong mục <strong>Cài
                             đặt</strong> của ứng dụng.</li>
                 </ul>
@@ -314,44 +346,77 @@
             <div class="section-card">
                 <h2><span class="icon">🗑️</span> 4. Quyền Xóa Dữ Liệu & Tài Khoản Vĩnh Viễn</h2>
                 <ul>
-                    <li>Tuân thủ nguyên tắc bảo vệ quyền riêng tư của Apple, bạn có thể xóa vĩnh viễn tài khoản của mình
-                        bất cứ lúc nào tại <strong>Cài đặt > Chi tiết tài khoản > Xóa tài khoản vĩnh viễn</strong>.</li>
-                    <li>Khi xác nhận xóa, toàn bộ lịch sử sinh hoạt, các mốc giờ kiểm tra, lịch thuốc và liên kết gia
-                        đình sẽ bị xóa sạch hoàn toàn trên máy chủ ngay lập tức.</li>
+                    <li>Tuân thủ nguyên tắc Apple App Store Guidelines (5.1.1(v)), bạn có quyền xóa vĩnh viễn tài khoản
+                        trực tiếp trong ứng dụng tại: <strong>Cài đặt > Chi tiết tài khoản > Xóa tài khoản vĩnh
+                            viễn</strong>.</li>
+                    <li>Khi xác nhận xóa, toàn bộ lịch sử sinh hoạt, mức pin, tọa độ điểm danh, lịch thuốc và liên kết
+                        gia đình sẽ bị xóa sạch hoàn toàn trên máy chủ ngay lập tức.</li>
+                    <li>Nếu bạn không thể truy cập ứng dụng, vui lòng gửi yêu cầu từ email đăng ký đến
+                        <strong>smartgroup.tq.global@gmail.com</strong> để chúng tôi xóa toàn bộ dữ liệu trong vòng
+                        24-48 giờ.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">✉️</span> 5. Thông Tin Liên Hệ</h2>
-                <p>Nếu bạn có bất kỳ câu hỏi hoặc thắc mắc nào liên quan đến Chính sách bảo mật này, xin vui lòng liên
-                    hệ với chúng tôi qua email: <strong>support@familycaring.app</strong></p>
+                <h2><span class="icon">👶</span> 5. Quyền Riêng Tư Của Trẻ Vị Thành Niên</h2>
+                <ul>
+                    <li>Ứng dụng được thiết kế nhằm mục đích hỗ trợ gắn kết và an tâm trong gia đình. Trường hợp trẻ vị
+                        thành niên sử dụng ứng dụng, cần có sự đồng thuận và giám sát trực tiếp từ cha mẹ hoặc người giám
+                        hộ hợp pháp.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. Quyền Người Dùng & Tuân Thủ Pháp Lý</h2>
+                <ul>
+                    <li>Chúng tôi tuân thủ các quy định bảo vệ dữ liệu cá nhân (bao gồm GDPR, APPI Nhật Bản). Bạn có quyền
+                        yêu cầu truy xuất, chỉnh sửa, trích xuất hoặc hủy bỏ sự đồng thuận xử lý dữ liệu của mình bất cứ lúc
+                        nào.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 7. Thông Tin Liên Hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi, góp ý hoặc yêu cầu hỗ trợ nào liên quan đến Chính sách bảo mật này, xin vui
+                    lòng liên hệ với chúng tôi qua email:</p>
+                <p>📧 Email hỗ trợ: <strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 Đội ngũ phát triển: SmartGroup / Family Caring Team</p>
             </div>
         </div>
 
-        <!-- ENGLISH CONTENT -->
+        <!-- ========================================== -->
+        <!-- ENGLISH CONTENT                            -->
+        <!-- ========================================== -->
         <div id="content-en" class="hidden fade-in">
             <div class="hero">
                 <span class="hero-badge">🛡️ PRIVACY BY DESIGN</span>
                 <h1>Privacy Policy</h1>
-                <p class="hero-desc">Family Caring is built with strict privacy principles. Your family's movement and
-                    activity data belongs only to you and the family members you explicitly connect with.</p>
+                <p class="hero-desc">Family Caring is built with strict privacy principles. Your family's movement,
+                    well-being, and activity data belongs only to you and the family members you explicitly connect with.</p>
                 <span class="date-tag">Last updated: October 2026</span>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">📊</span> 1. Data We Collect & Purpose</h2>
                 <ul>
-                    <li><strong>Movement & Steps (CoreMotion):</strong> We read step count strictly to detect morning
-                        routine activity and ensure peace of mind for family members. We do not track detailed fitness
-                        workouts.</li>
+                    <li><strong>Movement & Step Count (CoreMotion / HealthKit):</strong> Step counts are read strictly to
+                        detect morning routine activity and give family peace of mind. We do not track detailed fitness
+                        workouts or perform commercial profiling.</li>
                     <li><strong>Battery Level & Charging State:</strong> We monitor battery level to notify family when
-                        the phone is below 15% without charging, preventing false alarms when the device powers off.
-                    </li>
-                    <li><strong>GPS Location:</strong> Location coordinates are only captured when a user explicitly
-                        taps <em>"I am safe 👍"</em> or during scheduled safety check-ins, allowing loved ones to verify
-                        safety during emergencies.</li>
+                        the device is below 15% without charging, preventing false alarms when the phone shuts down.</li>
+                    <li><strong>GPS Location:</strong> Coordinates are recorded only when the user explicitly taps <em>"I
+                            am safe 👍"</em> or during emergency check-ins. We do not perform continuous background tracking;
+                        you can modify or revoke Location permissions at any time in iOS Settings.</li>
                     <li><strong>Medication Schedules:</strong> Medication names and reminder times are securely stored
-                        to trigger timely reminders.</li>
+                        to send timely reminders to your loved ones.</li>
+                    <li><strong>Account Information:</strong> Display name, email address (via Google Sign-In or Sign in
+                        with Apple), and a unique Member Code (<code>FT-XXXXXX</code>) for private family pairing.</li>
+                    <li><strong>Push Notification Tokens (APNs):</strong> Apple Push Notification service device tokens
+                        are used exclusively to deliver safety check-ins and urgent battery alerts.</li>
+                    <li><strong>Apple Watch & Sensor Data:</strong> If paired with Apple Watch, step count and heart rate
+                        accessed via HealthKit are used solely to verify morning activity. <strong>HealthKit data is never
+                            used for advertising, marketing, or shared with third-party data brokers</strong> (Apple Review
+                        Guideline 5.1.1(i) compliance).</li>
                 </ul>
             </div>
 
@@ -360,40 +425,131 @@
                 <ul>
                     <li><strong>No Data Selling:</strong> We NEVER sell, rent, or monetize your personal data with
                         third-party advertisers or data brokers.</li>
-                    <li><strong>No Cross-App Tracking:</strong> We do not collect IDFA advertising identifiers or track
-                        your activity across other apps or websites.</li>
-                    <li><strong>Encrypted Connections:</strong> All network communication between the app and the server
-                        is encrypted using standard HTTPS/TLS protocols.</li>
+                    <li><strong>No Cross-App Tracking:</strong> We do not collect IDFA advertising identifiers and do not
+                        track your activity across third-party apps or websites.</li>
+                    <li><strong>End-to-End Encryption:</strong> All network communication between the app and the server
+                        is protected using modern HTTPS/TLS 1.3 encryption.</li>
                 </ul>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">👨‍👩‍👧‍👦</span> 3. Private Family Sharing</h2>
                 <ul>
-                    <li>Activity reports, safety indicators, and medication logs are only accessible to family members
-                        you explicitly paired with via QR Code or Member Code (<code>FT-XXXXXX</code>).</li>
-                    <li>You have complete control to revoke or remove any follower at any time inside the
-                        <strong>Settings</strong> screen.
-                    </li>
+                    <li>Activity reports, battery levels, medication logs, and safety check-ins are only accessible to
+                        family members you explicitly paired with via QR Code or Member Code (<code>FT-XXXXXX</code>).</li>
+                    <li>You maintain full control to revoke or remove any follower at any time inside the
+                        <strong>Settings</strong> screen.</li>
                 </ul>
             </div>
 
             <div class="section-card">
                 <h2><span class="icon">🗑️</span> 4. Instant Account & Data Deletion</h2>
                 <ul>
-                    <li>In compliance with Apple App Store Guidelines, you have the right to permanently delete your
-                        account at any time via <strong>Settings > Account Details > Delete Account
-                            Permanently</strong>.</li>
-                    <li>Upon confirmation, all activity logs, checkpoints, medications, and family links are permanently
-                        wiped from our server immediately.</li>
+                    <li>In compliance with Apple App Store Guidelines (5.1.1(v)), you can permanently delete your account
+                        directly in the app at: <strong>Settings > Account Details > Delete Account Permanently</strong>.</li>
+                    <li>Upon confirmation, all activity records, battery logs, location check-ins, medication schedules,
+                        and family pairings are permanently and immediately erased from our servers.</li>
+                    <li>If you cannot access the app, please email us from your registered account at
+                        <strong>smartgroup.tq.global@gmail.com</strong>, and we will delete all data within 24–48 hours.</li>
                 </ul>
             </div>
 
             <div class="section-card">
-                <h2><span class="icon">✉️</span> 5. Contact Us</h2>
-                <p>If you have any questions or feedback regarding this Privacy Policy, please contact our team at:
-                    <strong>support@familycaring.app</strong>
-                </p>
+                <h2><span class="icon">👶</span> 5. Children's Privacy</h2>
+                <ul>
+                    <li>Family Caring is designed for family protection and elder care. Any use of the application by minors
+                        requires verifiable parental or legal guardian consent and supervision.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. User Rights & Legal Compliance</h2>
+                <ul>
+                    <li>We comply with applicable international data privacy standards (including GDPR and Japan's APPI).
+                        You have the right to request access, rectification, export, or withdrawal of consent regarding
+                        your data at any time.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 7. Contact Us</h2>
+                <p>If you have any questions, feedback, or data privacy requests, please contact us at:</p>
+                <p>📧 Support Email: <strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 Development Team: SmartGroup / Family Caring Team</p>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- JAPANESE CONTENT (日本語)                   -->
+        <!-- ========================================== -->
+        <div id="content-ja" class="hidden fade-in">
+            <div class="hero">
+                <span class="hero-badge">🛡️ プライバシー・バイ・デザイン</span>
+                <h1>プライバシーポリシー</h1>
+                <p class="hero-desc">Family Caring（ファミリーケア）は、厳格なプライバシー保護方針に基づいて設計されています。
+                    ご家族の健康・日常活動データはご自身のものであり、相互に明示的なペアリングを行ったご家族間でのみ共有されます。</p>
+                <span class="date-tag">最終更新日：2026年10月</span>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">📊</span> 1. 取得する情報とその利用目的</h2>
+                <ul>
+                    <li><strong>身体活動および歩数データ（CoreMotion / HealthKit）：</strong>朝の起床や日常の活動状況を確認し、離れて暮らすご家族に安心をお届けする目的でのみ歩数情報を読み取ります。詳細なスポーツ運動ログの取得や、商業的なプロファイリングは行いません。</li>
+                    <li><strong>バッテリー残量および充電状態：</strong>端末のバッテリー残量が15%未満で未充電の際に、ご家族へ注意喚起通知を届けるために監視します。これにより充電切れによる誤警報を防ぎます。</li>
+                    <li><strong>位置情報（GPS）：</strong>ユーザーが自主的に<em>「元気だよ 👍」</em>ボタンをタップした際、または緊急安否確認の要請時にのみ位置座標を記録します。常時バックグラウンド追跡は行いません。iOSの「設定」からいつでも位置情報の利用許可を変更・停止できます。</li>
+                    <li><strong>服薬スケジュール：</strong>お薬の名称および服薬指定時刻を安全に保持し、定刻のリマインダー通知を送信するために利用します。</li>
+                    <li><strong>アカウント認証情報：</strong>表示名、メールアドレス（AppleでサインインまたはGoogleサインイン）、および家族ペアリング専用の固有メンバーコード（<code>FT-XXXXXX</code>）。</li>
+                    <li><strong>プッシュ通知トークン（APNs）：</strong>Apple Push Notification serviceのデバイストークンは、安否確認や低バッテリー警告などの重要通知の配信にのみ利用されます。</li>
+                    <li><strong>Apple Watch・ヘルスケア連携：</strong>Apple Watch連携時、HealthKitから取得される歩数や心拍数は朝の活動確認のみに使用されます。<strong>Appleガイドライン（5.1.1(i)）に則り、HealthKitデータを広告・マーケティング目的で利用したり、第三者（データブローカー等）に提供することは一切ありません</strong>。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🚫</span> 2. 追跡の排除と広告ゼロの約束</h2>
+                <ul>
+                    <li><strong>個人データの販売禁止：</strong>お客様の個人情報を第三者、広告配信業者、またはデータブローカーに販売、貸与、商業利用することは一切ありません。</li>
+                    <li><strong>アプリ横断トラッキングの不実施（No IDFA）：</strong>広告用識別子（IDFA）の収集や、他社アプリ・Webサイトを横断したユーザー行動の追跡は一切行いません。</li>
+                    <li><strong>高度な通信暗号化：</strong>端末とサーバー間の通信はすべて、業界標準のHTTPS / TLS 1.3暗号化通信により安全に保護されています。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">👨‍👩‍👧‍👦</span> 3. ご家族間でのみ共有される安全な仕組み</h2>
+                <ul>
+                    <li>活動記録、バッテリー残量、服薬状況、安否チェックイン情報は、QRコードまたはメンバーコード（<code>FT-XXXXXX</code>）で直接接続されたご家族の端末にのみ開示されます。</li>
+                    <li>連携中の見守りメンバーは、アプリ内の<strong>「設定」</strong>からいつでも自由に解除・削除することができます。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">🗑️</span> 4. アカウントおよびデータの完全削除（Appleガイドライン準拠）</h2>
+                <ul>
+                    <li>Apple App Store審査ガイドライン（5.1.1(v)）に基づき、アプリ内から直接アカウントおよび関連データをいつでも完全削除できます。</li>
+                    <li>操作手順：<strong>「設定」＞「アカウント詳細」＞「アカウントを完全に削除」</strong>。</li>
+                    <li>削除の確認後、サーバーに保管されている活動記録、バッテリー履歴、位置チェックイン、服薬スケジュール、家族連携を含むすべての個人情報は即座に完全抹消されます。</li>
+                    <li>端末の故障等でアプリから操作できない場合は、ご登録のメールアドレスより <strong>smartgroup.tq.global@gmail.com</strong> までご連絡いただければ、24〜48時間以内に手動削除を完了いたします。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">👶</span> 5. 未成年者のプライバシー保護</h2>
+                <ul>
+                    <li>本アプリはご家族の安否確認および高齢者の見守りを目的として開発されています。未成年者が本サービスを利用する場合は、必ず親権者または法定代理人の同意と監督のもとでご利用ください。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">⚖️</span> 6. 個人情報保護法（APPI）および国際基準への準拠</h2>
+                <ul>
+                    <li>当社は日本の「個人情報の保護に関する法律（APPI）」および関連法規を遵守します。ユーザーはご自身の個人情報に関して、開示・訂正・利用停止・削除を求める権利を有しています。</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h2><span class="icon">✉️</span> 7. お問い合わせ窓口</h2>
+                <p>本プライバシーポリシーに関するご質問、ご意見、データ開示・削除のご請求は、下記サポート窓口までご連絡ください。</p>
+                <p>📧 サポートメール：<strong><a href="mailto:smartgroup.tq.global@gmail.com">smartgroup.tq.global@gmail.com</a></strong></p>
+                <p>🏢 開発・運営：SmartGroup / Family Caring 開発チーム</p>
             </div>
         </div>
 
@@ -406,50 +562,63 @@
         function setLang(lang) {
             const viDiv = document.getElementById('content-vi');
             const enDiv = document.getElementById('content-en');
+            const jaDiv = document.getElementById('content-ja');
             const btnVi = document.getElementById('btn-vi');
             const btnEn = document.getElementById('btn-en');
+            const btnJa = document.getElementById('btn-ja');
 
-            if (lang === 'vi') {
-                viDiv.classList.remove('hidden');
-                enDiv.classList.add('hidden');
-                btnVi.classList.add('active');
-                btnEn.classList.remove('active');
-                document.documentElement.lang = 'vi';
-            } else {
-                viDiv.classList.add('hidden');
+            // Hide all
+            viDiv.classList.add('hidden');
+            enDiv.classList.add('hidden');
+            jaDiv.classList.add('hidden');
+            btnVi.classList.remove('active');
+            btnEn.classList.remove('active');
+            btnJa.classList.remove('active');
+
+            if (lang === 'ja') {
+                jaDiv.classList.remove('hidden');
+                btnJa.classList.add('active');
+                document.documentElement.lang = 'ja';
+            } else if (lang === 'en') {
                 enDiv.classList.remove('hidden');
-                btnVi.classList.remove('active');
                 btnEn.classList.add('active');
                 document.documentElement.lang = 'en';
+            } else {
+                viDiv.classList.remove('hidden');
+                btnVi.classList.add('active');
+                document.documentElement.lang = 'vi';
             }
+
             try {
                 localStorage.setItem('fc_user_lang', lang);
             } catch (e) { }
         }
 
         // Language resolution priority:
-        // 1. URL Query Parameter ?lang=vi or ?lang=en
+        // 1. URL Query Parameter ?lang=vi or ?lang=en or ?lang=ja
         // 2. localStorage saved preference
         // 3. Browser / Device system language
         (function initLanguage() {
             const urlParams = new URLSearchParams(window.location.search);
             const queryLang = urlParams.get('lang');
 
-            if (queryLang && (queryLang === 'vi' || queryLang === 'en')) {
+            if (queryLang && ['vi', 'en', 'ja'].includes(queryLang)) {
                 setLang(queryLang);
                 return;
             }
 
             try {
                 const savedLang = localStorage.getItem('fc_user_lang');
-                if (savedLang && (savedLang === 'vi' || savedLang === 'en')) {
+                if (savedLang && ['vi', 'en', 'ja'].includes(savedLang)) {
                     setLang(savedLang);
                     return;
                 }
             } catch (e) { }
 
-            const userLang = navigator.language || navigator.userLanguage || 'vi';
-            if (userLang.startsWith('en')) {
+            const userLang = (navigator.language || navigator.userLanguage || 'vi').toLowerCase();
+            if (userLang.startsWith('ja')) {
+                setLang('ja');
+            } else if (userLang.startsWith('en')) {
                 setLang('en');
             } else {
                 setLang('vi');
